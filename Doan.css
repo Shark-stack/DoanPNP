@@ -749,7 +749,7 @@ p {
   position: sticky;
   top: 60px;
   height: 100%;
-  width: 33%;
+  width: 35%;
 }
 
 .Background_Content_3 {
@@ -976,7 +976,7 @@ h1 {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
-  width: 300px;
+  width: 20%;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -1284,7 +1284,7 @@ input:not(:placeholder-shown) + label {
 }
 
 .footer {
-  height: 55px;
+  height: 65px;
   background-color: #f05625;
   padding: 20px;
   color: white;
@@ -1293,7 +1293,7 @@ input:not(:placeholder-shown) + label {
 
 .footer-text > .Text_1 {
   margin-top: -0.5%;
-  margin-left: 1.5%;
+  margin-left: 9%;
 }
 
 .footer-text > .Text_2 {
@@ -1308,7 +1308,7 @@ input:not(:placeholder-shown) + label {
   padding-left: 15px;
   float: left;
   margin: 10px 0;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .footer p:hover {
@@ -1318,6 +1318,7 @@ input:not(:placeholder-shown) + label {
 .footer-text {
   width: 70%;
   height: 100%;
+  padding-top: 5px;
   padding-left: 5px;
   float: left;
 }
@@ -1327,7 +1328,7 @@ input:not(:placeholder-shown) + label {
   width: 30%;
   height: auto;
   margin-right: -5px;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .footer-icons a {
@@ -1335,7 +1336,7 @@ input:not(:placeholder-shown) + label {
 }
 
 .footer-icons img {
-  width: 110px;
+  width: 100px;
   height: auto;
   vertical-align: middle;
 }
