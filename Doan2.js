@@ -1,38 +1,47 @@
-let currentIndex = 0;
-const images = document.querySelector(".slider");
-const totalImages = document.querySelectorAll(".slider-image").length;
-const nextButton = document.getElementById("next");
-const prevButton = document.getElementById("prev");
+document.addEventListener("DOMContentLoaded", function () {
+  var nutphai = document.querySelector(".phai");
+  var nuttrai = document.querySelector(".trai");
+  var dsslide = document.querySelectorAll("._1slide");
+  var vitri = 0;
+  console.log(nutphai);
+  console.log(nuttrai);
+  nutphai.addEventListener("click", function () {
+    if (vitri < dsslide.length - 1) {
+      dsslide[vitri].classList.remove("hienra");
+      dsslide[vitri + 1].classList.add("hienra");
+      vitri++;
+    } else {
+      dsslide[dsslide.length - 1].classList.remove("hienra");
+      dsslide[0].classList.add("hienra");
+      vitri = 0;
+    }
+  });
 
-// Hàm chuyển sang ảnh tiếp theo
-function nextImage() {
-  currentIndex = (currentIndex + 1) % totalImages;
-  updateSlider();
-}
+  nuttrai.addEventListener("click", function () {
+    if (vitri > 0) {
+      dsslide[vitri].classList.remove("hienra");
+      dsslide[vitri - 1].classList.add("hienra");
+      vitri--;
+    } else {
+      dsslide[0].classList.remove("hienra");
+      dsslide[dsslide.length - 1].classList.add("hienra");
+      vitri = dsslide.length - 1;
+    }
+  });
 
-// Hàm quay lại ảnh trước
-function prevImage() {
-  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-  updateSlider();
-}
+  // auto chuyển động slide
+  function autoSlide() {
+    if (vitri < dsslide.length - 1) {
+      dsslide[vitri].classList.remove("hienra");
+      dsslide[vitri + 1].classList.add("hienra");
+      vitri++;
+    } else {
+      dsslide[dsslide.length - 1].classList.remove("hienra");
+      dsslide[0].classList.add("hienra");
+      vitri = 0;
+    }
+  }
 
-// Cập nhật vị trí slider
-function updateSlider() {
-  images.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-// Tự động chuyển ảnh sau mỗi 3 giây
-let autoSlide = setInterval(nextImage, 3000);
-
-// Khi người dùng click vào mũi tên
-nextButton.addEventListener("click", () => {
-  nextImage();
-  clearInterval(autoSlide); // Dừng tự động khi click
-  autoSlide = setInterval(nextImage, 3000); // Tự động bật lại
-});
-
-prevButton.addEventListener("click", () => {
-  prevImage();
-  clearInterval(autoSlide); // Dừng tự động khi click
-  autoSlide = setInterval(nextImage, 3000); // Tự động bật lại
+  // gọi autoSlide mỗi 3s
+  setInterval(autoSlide, 3000);
 });

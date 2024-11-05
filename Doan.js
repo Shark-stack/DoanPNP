@@ -16,7 +16,7 @@ document
   .getElementById("Menu_icon")
   .addEventListener("click", function (event) {
     event.stopPropagation(); // Ngăn không cho sự kiện click kích hoạt cho document
-    toggleMenu();
+    toggleMenu(); // Gọi hàm toggleMenu để bật/tắt menu
   });
 
 // Sự kiện click ra ngoài menu để đóng menu
