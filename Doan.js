@@ -24,14 +24,20 @@ document.addEventListener("click", function (event) {
   const Slide_Menu = document.getElementById("Slide_Menu");
   const Menu_icon = document.getElementById("Menu_icon");
 
-  // Kiểm tra nếu click ra ngoài menu và icon
-  if (!Slide_Menu.contains(event.target) && !Menu_icon.contains(event.target)) {
-    // Nếu menu đang mở (có class 'active'), thì đóng menu
-    if (Slide_Menu.classList.contains("active")) {
-      Slide_Menu.classList.remove("active");
+  // Kiểm tra nếu các phần tử tồn tại trước khi xử lý
+  if (Slide_Menu && Menu_icon) {
+    // Kiểm tra nếu click ra ngoài menu và icon
+    if (
+      !Slide_Menu.contains(event.target) &&
+      !Menu_icon.contains(event.target)
+    ) {
+      // Nếu menu đang mở (có class 'active'), thì đóng menu
+      if (Slide_Menu.classList.contains("active")) {
+        Slide_Menu.classList.remove("active");
 
-      // Đổi lại icon về 3 gạch khi menu đóng
-      Menu_icon.innerHTML = '<i class="fa fa-bars"></i>';
+        // Đổi lại icon về 3 gạch khi menu đóng
+        Menu_icon.innerHTML = '<i class="fa fa-bars"></i>';
+      }
     }
   }
 });
