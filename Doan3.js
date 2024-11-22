@@ -1,21 +1,21 @@
-// Lấy tất cả các liên kết trong menu
-const menuLinks = document.querySelectorAll("#Khung_Menu_3 a");
+// Lấy phần tử nút
+const backToTopButton = document.getElementById("backtotop");
 
-// Function để cuộn mượt mà đến phần mục tiêu
-function scrollToSection(event) {
-  event.preventDefault();
-
-  // Lấy giá trị của data-target
-  const target = event.target.getAttribute("data-target");
-  const section = document.getElementById(target);
-
-  // Kiểm tra nếu phần mục tiêu tồn tại
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" }); // Cuộn mượt mà đến phần mục tiêu
+// Lắng nghe sự kiện cuộn (scroll)
+window.addEventListener("scroll", () => {
+  // Hiện nút nếu cuộn xuống quá 300px
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
   }
-}
+});
 
-// Thêm sự kiện click cho tất cả các liên kết trong menu
-menuLinks.forEach((link) => {
-  link.addEventListener("click", scrollToSection);
+// Thêm sự kiện click cho nút
+backToTopButton.addEventListener("click", () => {
+  // Cuộn mượt lên đầu trang
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });

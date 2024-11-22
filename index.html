@@ -11,74 +11,81 @@
 
 <body>
     <script src="Doan.js"></script>
-    <!-- <div class="Bg" style="background-image: url(img/1.jpg);"> -->
-    <div class="Khung_Menu">
-        <div class="Left">
-            <div class="KhungIc">
-                <div class="Menu_icon" id="Menu_icon" onclick="toggleMenu()"><i class="fa fa-bars"
-                        aria-hidden="true"></i>
-                </div>
-                <div class="Slide_Menu" id="Slide_Menu" style="background-image: url(img/Layer1.jpg); ">
-                    <ul>
-                        <li><a href=""><i class="fa fa-cutlery" aria-hidden="true"></i>Trang chủ</a></li>
-                        <li><a href=""><i class="fa fa-cutlery" aria-hidden="true"></i>Giới thiệu</a></li>
-                        <li><a href=""><i class="fa fa-cutlery" aria-hidden="true"></i>Đặt hàng online</a></li>
-                        <li><a href=""><i class="fa fa-cutlery" aria-hidden="true"></i>Cửa hàng</a></li>
-                        <li><a href=""><i class="fa fa-cutlery" aria-hidden="true"></i>Về chúng tôi</a></li>
-                        <li><a href=""><i class="fa fa-cutlery" aria-hidden="true"></i>Liên hệ</a></li>
-                    </ul>
-                    <div class="style_ic">
-                        <div class="ic_1"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+    <div class="Bg" style="background-image: url(img/1.jpg);">
+        <div class="Khung_Menu">
+            <div class="Left">
+                <div class="KhungIc">
+                    <div class="Menu_icon" id="Menu_icon" onclick="toggleMenu()"><i class="fa fa-bars"
+                            aria-hidden="true"></i>
+                    </div>
+                    <div class="Slide_Menu" id="Slide_Menu" style="background-image: url(img/Layer1.jpg); ">
+                        <ul>
+                            <li><a href=""><i class="fa fa-cutlery" aria-hidden="true"></i>Trang chủ</a></li>
+                            <li><a href=""><i class="fa fa-cutlery" aria-hidden="true"></i>Giới thiệu</a></li>
+                            <li><a href="#dathang" data-target="dathang"><i class="fa fa-cutlery"
+                                        aria-hidden="true"></i>Đặt hàng</a></li>
+                            <li><a href="#khuyenmai" data-target="khuyenmai"><i class="fa fa-cutlery"
+                                        aria-hidden="true"></i>Khuyến mãi</a></li>
+                            <li><a href="#cuahang" data-target="cuahang"><i class="fa fa-cutlery"
+                                        aria-hidden="true"></i>Cửa hàng</a></li>
+                            <li><a href="#vechungtoi" data-target="vechungtoi"><i class="fa fa-cutlery"
+                                        aria-hidden="true"></i>Về chúng tôi</a></li>
+                            <li><a href="#lienhe" data-target="lienhe"><i class="fa fa-cutlery"
+                                        aria-hidden="true"></i>Liên hệ</a></li>
+                        </ul>
+                        <div class="style_ic">
+                            <div class="ic_1"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                            </div>
+                            <div class="ic_2"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                            <div class="ic_3"><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
                         </div>
-                        <div class="ic_2"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                        <div class="ic_3"><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
                     </div>
                 </div>
-            </div>
-            <div class="Menu_Left">
-                <div class="Menu_Left_1">
-                    <img src="img/vn.jpg" alt="">
-                    <span class="TV">Tiếng Việt</span>
-                    <i class="muiten"></i>
+                <div class="Menu_Left">
+                    <div class="Menu_Left_1">
+                        <img src="img/vn.jpg" alt="">
+                        <span class="TV">Tiếng Việt</span>
+                        <i class="muiten"></i>
+                    </div>
+                    <ul class="Menu_Left_List">
+                        <li><img src="img/anh.png" alt=""><a href="#" class="Lang">English</a></li>
+                        <li><img src="img/vn.jpg" alt=""><a href="#" class="Lang">Tiếng Việt</a></li>
+                        <li><img src="img/hq.png" alt=""><a href="#" class="Lang">한국어</a></li>
+                        <li><img src="img/nb.png" alt=""><a href="#" class="Lang">日本語</a></li>
+                    </ul>
                 </div>
-                <ul class="Menu_Left_List">
-                    <li><img src="img/anh.png" alt=""><a href="#" class="Lang">English</a></li>
-                    <li><img src="img/vn.jpg" alt=""><a href="#" class="Lang">Tiếng Việt</a></li>
-                    <li><img src="img/hq.png" alt=""><a href="#" class="Lang">한국어</a></li>
-                    <li><img src="img/nb.png" alt=""><a href="#" class="Lang">日本語</a></li>
-                </ul>
-            </div>
-            <div class="HCM">
-                <div class="HCM_1">
-                    <span class="HCM_2">Hồ Chí Minh</span>
-                    <i class="muiten"></i>
+                <div class="HCM">
+                    <div class="HCM_1">
+                        <span class="HCM_2">Hồ Chí Minh</span>
+                        <i class="muiten"></i>
+                    </div>
+                    <ul class="Menu_Left_List_2">
+                        <li><a href="" class="Lang_2">Hồ Chí Minh</a></li>
+                        <li><a href="" class="Lang_2">Hà Nội</a></li>
+                        <li><a href="" class="Lang_2">Đà Nẵng</a></li>
+                        <li><a href="" class="Lang_2">Hải Phòng</a></li>
+                        <li><a href="" class="Lang_2">Bình Dương</a></li>
+                    </ul>
                 </div>
-                <ul class="Menu_Left_List_2">
-                    <li><a href="" class="Lang_2">Hồ Chí Minh</a></li>
-                    <li><a href="" class="Lang_2">Hà Nội</a></li>
-                    <li><a href="" class="Lang_2">Đà Nẵng</a></li>
-                    <li><a href="" class="Lang_2">Hải Phòng</a></li>
-                    <li><a href="" class="Lang_2">Bình Dương</a></li>
-                </ul>
             </div>
-        </div>
-        <div class="Logo">
-            <a href=""><img src="img/alf-logo.png" alt=""></a>
-        </div>
-        <div class="Right">
-            <div class="rewards">
-                <span>REWARDS</span><span class="cong">+</span>
-                <span class="Thanhvien">Thành viên</span>
+            <div class="Logo">
+                <a href=""><img src="img/alf-logo.png" alt=""></a>
             </div>
-            <div class="ND">
-                <a href=""><i class="fa fa-user-circle-o ic" aria-hidden="true"></i></a>
-                <span class="ND1">Đăng Nhập</span> <span>/</span>
-                <span class="ND1">Đăng Ký</span>
-                <a href=""><i class="fa fa-shopping-bag ic" aria-hidden="true"><span class="Khong">(0)</span></i></a>
+            <div class="Right">
+                <div class="rewards">
+                    <span>REWARDS</span><span class="cong">+</span>
+                    <span class="Thanhvien">Thành viên</span>
+                </div>
+                <div class="ND">
+                    <a href=""><i class="fa fa-user-circle-o ic" aria-hidden="true"></i></a>
+                    <span class="ND1">Đăng Nhập</span> <span>/</span>
+                    <span class="ND1">Đăng Ký</span>
+                    <a href=""><i class="fa fa-shopping-bag ic" aria-hidden="true"><span
+                                class="Khong">(0)</span></i></a>
+                </div>
             </div>
         </div>
     </div>
-    <!-- </div> -->
     <div class="Bg2" style="background-image: url(img/1.jpg);">
         <div class="Khung_Menu_2">
             <div class="Top">
@@ -125,7 +132,7 @@
             </div>
         </div>
     </div>
-    <script src="Doan3.js"></script>
+
     <div class="Bg3" style="background-image: url(img/1.jpg);">
         <nav id="Khung_Menu_3">
             <ul>
@@ -139,156 +146,154 @@
         </nav>
     </div>
     <div class="Bg4" style="background-image: url(img/Bg4.jpg);">
-        <div class="Khung_Content_1">
-            <div class="Khung_Content_2">
-                <div class="menu">
-                    <div id="content">
+        <section id="dathang">
+            <div class="Khung_Content_1">
+                <div class="Khung_Content_2">
+                    <div class="menu">
                         <section id="pizza">
                             <h2>PIZZA</h2>
                             <p>(Thường R: 6 miếng 22cm | Lớn L: 8 miếng 30cm)</p>
                             <div class="menu-grid">
                                 <div class="menu-item">
-                                    <img src="img/pizza1.jpg" alt="" />
+                                    <div class="item-pizza"><img src="img/pizza1.jpg" alt="" /></div>
                                     <h3 class="Name">#1 MARGHERITA</h3>
                                     <p class="Gia_Ban">R 170.000 ₫<br />L 240.000 ₫</p>
                                     <p>Pizza với sốt cà chua và phô mai.</p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/pizza2.jpg" alt="" />
+                                    <div class="item-pizza"><img src="img/pizza2.jpg" alt="" /></div>
                                     <h3 class="Name">#2 HAWAIIAN</h3>
                                     <p class="Gia_Ban">R 170.000 ₫<br />L 240.000 ₫</p>
                                     <p>Pizza với sốt cà chua, jambông, thơm và phô mai.</p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/pizza3.jpg" alt="" />
+                                    <div class="item-pizza"> <img src="img/pizza3.jpg" alt="" /></div>
                                     <h3 class="Name">#3 TROPICANA SEAFOOD</h3>
                                     <p class="Gia_Ban">R 170.000 ₫<br />L 240.000 ₫</p>
                                     <p>Pizza hải sản, thơm, xốt ớt chua ngọt và phô mai.</p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/pizza4.jpg" alt="" />
+                                    <div class="item-pizza"> <img src="img/pizza4.jpg" alt="" /></div>
                                     <h3 class="Name">#4 BBQ BEEFY</h3>
                                     <p class="Gia_Ban">R 170.000 ₫<br />L 250.000 ₫</p>
                                     <p>
                                         Pizza với thịt ba chỉ bò và ba rọi xông khói, hành tây xào, cà chua
                                         nướng, v.v...
                                     </p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/pizza5.jpg" alt="" />
+                                    <div class="item-pizza"> <img src="img/pizza5.jpg" alt="" /></div>
                                     <h3 class="Name">#5 BBQ CHICKEN</h3>
                                     <p class="Gia_Ban">R 170.000 ₫<br />L 250.000 ₫</p>
                                     <p>
                                         Pizza với thịt gà Mexico, xốt BBQ, ớt chuông xanh, nấm, jambông,
                                         v.v...
                                     </p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                             </div>
                         </section>
-                    </div>
-                    <div id="content">
+
                         <section id="starters">
                             <h2>STARTERS</h2>
                             <p>(Không phục vụ kèm xà lách)</p>
                             <div class="menu-grid">
                                 <div class="menu-item">
-                                    <img src="img/soup.jpg" alt="" />
+                                    <div class="item-starters"><img src="img/soup.jpg" alt="" /></div>
                                     <h3 class="Name">SOUP OF THE DAY</h3>
                                     <p class="Gia_Ban">95.000 ₫</p>
                                     <p>Các món súp đặc biệt trong ngày.</p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
-                                <div class="menu-item">
-                                    <img src="img/HWing.jpg" alt="" />
+                                <div class="menu-item ">
+                                    <div class="item-starters"><img src="img/HWing.jpg" alt="" /></div>
                                     <h3 class="Name">AL'S CHICKEN WINGS</h3>
                                     <p class="Gia_Ban">140.000 ₫</p>
-                                    <p>Cánh gà nướng xốt BBQ • Cánh gà chiên dùng kèm xốt...</p>
-                                    <button>Chọn mua</button>
+                                    <p>Cánh gà nướng xốt BBQ</p>
+                                    <button class="But">Chọn mua</button>
                                 </div>
-                                <div class="menu-item">
-                                    <img src="img/Bread.jpg" alt="" />
+                                <div class="menu-item ">
+                                    <div class="item-starters"><img src="img/Bread.jpg" alt="" /></div>
                                     <h3 class="Name">GARLIC CHEESE LOAF</h3>
                                     <p class="Gia_Ban">90.000 ₫</p>
                                     <p>Bánh mỳ bơ tỏi.</p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                             </div>
                         </section>
-                    </div>
 
-                    <div id="content">
                         <section id="bbq">
                             <h2>BBQ</h2>
                             <p>(Không phục vụ kèm xà lách)</p>
                             <div class="menu-grid">
                                 <div class="menu-item">
-                                    <img src="img/bbq1.jpg" alt="" />
+                                    <div class="item-bbq"><img src="img/bbq1.jpg" alt="" /></div>
                                     <h3 class="Name">#1 STARTER PLATTER</h3>
                                     <p class="Gia_Ban">475.000 ₫</p>
                                     <p>
-                                        Đĩa tổng hợp gồm: sườn nướng, khoai tây múi chiên giòn, mực tẩm
+                                        Đĩa tổng hợp gồm: sườn nướng, khoai tây múi chiên giòn, mực
+                                        tẩm
                                         bột
                                         chiên, cánh gà nướng...
                                     </p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/bbq2.jpg" alt="" />
+                                    <div class="item-bbq"><img src="img/bbq2.jpg" alt="" /></div>
                                     <h3 class="Name">#2 MEAT LOVER'S PLATTER</h3>
                                     <p class="Gia_Ban">450.000 ₫</p>
                                     <p>
                                         Đĩa nướng tổng hợp gồm: cánh gà, xúc xích Đức, bò nhập khẩu xiên
                                         que, 4 miếng sườn...
                                     </p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/bbq3.jpg" alt="" />
+                                    <div class="item-bbq"><img src="img/bbq3.jpg" alt="" /></div>
                                     <h3 class="Name">CHICKEN PLATTER</h3>
                                     <p class="Gia_Ban">245.000 ₫</p>
                                     <p>
-                                        Đĩa gà tổng hợp gồm: gà chiên xốt Hàn Quốc, ức gà tẩm bột chiên
+                                        Đĩa gà tổng hợp gồm: gà chiên xốt Hàn Quốc, ức gà tẩm bột
+                                        chiên
                                         giòn
                                         & cánh...
                                     </p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                             </div>
                         </section>
-                    </div>
 
-                    <div id="content">
                         <section id="salads">
                             <h2>SALADS</h2>
                             <div class="menu-grid">
                                 <div class="menu-item">
-                                    <img src="img/salad1.jpg" alt="" />
+                                    <div class="item-salads"><img src="img/salad1.jpg" alt="" /></div>
                                     <h3 class="Name">GREEN GARDEN SALAD</h3>
                                     <p class="Gia_Ban">155.000 ₫</p>
                                     <p>
                                         Xà lách, cà chua, dưa leo, hành tây, trộn xốt dầu giấm đặc biệt của
                                         Al Fresco's.
                                     </p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/salad2.jpg" alt="" />
+                                    <div class="item-salads"><img src="img/salad2.jpg" alt="" /></div>
                                     <h3 class="Name">PRAWN COBB SALAD</h3>
                                     <p class="Gia_Ban">210.000 ₫</p>
                                     <p>
-                                        Xà lách, trứng luộc, tôm xào tỏi, hành tây, thịt xông khói, bắp,
+                                        Xà lách, trứng luộc, tôm xào tỏi, hành tây, thịt xông khói,
+                                        bắp,
                                         bơ
                                         trái và xốt ngò...
                                     </p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/salad3.jpg" alt="" />
+                                    <div class="item-salads"><img src="img/salad3.jpg" alt="" /></div>
                                     <h3 class="Name">CAESAR SALAD</h3>
                                     <p class="Gia_Ban">175.000 ₫</p>
                                     <p>
@@ -296,97 +301,261 @@
                                         xốt
                                         kem và phô mai...
                                     </p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                             </div>
                         </section>
-                    </div>
 
-                    <div id="content">
                         <section id="pasta">
                             <h2>PASTA</h2>
                             <div class="menu-grid">
                                 <div class="menu-item">
-                                    <img src="img/pasta1.jpg" alt="" />
+                                    <div class="item-pasta"><img src="img/pasta1.jpg" alt="" /></div>
                                     <h3 class="Name">SPAGHETTI BOLOGNAISE</h3>
                                     <p class="Gia_Ban">220.000 ₫</p>
                                     <p>Mỳ Ý sợi dài với xốt thịt bò hầm & cà chua.</p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/pasta2.jpg" alt="" />
+                                    <div class="item-pasta"><img src="img/pasta2.jpg" alt="" /></div>
                                     <h3 class="Name">STEAK & MUSHROOM SPAGHETTI</h3>
                                     <p class="Gia_Ban">230.000 ₫</p>
                                     <p>Mỳ Ý sợi dài với thịt bò Úc, nấm & xốt kem đậu đen.</p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/pasta3.jpg" alt="" />
-                                    <h3 class="Name">SPAGHETTI SEAFOOD</h3>
+                                    <div class="item-pasta"><img src="img/pasta3.jpg" alt="" /></div>
+                                    <h3 class="Name">SPAGHETTI SEAFOOD CREAMY</h3>
                                     <p class="Gia_Ban">230.000 ₫</p>
                                     <p>Mỳ Ý sợi dài với hải sản xốt cà chua cay hoặc xốt kem tỏi.</p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                             </div>
                         </section>
-                    </div>
 
-                    <div id="content">
+
                         <section id="ribs">
                             <h2>RIBS & STEAK</h2>
                             <p>(Không phục vụ kèm xà lách)</p>
                             <div class="menu-grid">
                                 <div class="menu-item">
-                                    <img src="img/steak1.jpg" alt="" />
+                                    <div class="item-ribs"><img src="img/steak1.jpg" alt="" /></div>
                                     <h3 class="Name">JUMBO RIBS (OUR SPECIALTY)</h3>
                                     <p class="Gia_Ban">690.000 ₫</p>
                                     <p>10-12 dẻ sườn lớn nướng kèm khoai tây múi chiên.</p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/steak2.jpg" alt="" />
+                                    <div class="item-ribs"><img src="img/steak2.jpg" alt="" /></div>
                                     <h3 class="Name">NZ RIB EYE STEAK (250GR)</h3>
                                     <p class="Gia_Ban">420.000 ₫</p>
                                     <p>Thăn bò New Zealand nướng mềm dùng kèm khoai tây sợi chiên.</p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
-                                    <img src="img/steak3.jpg" alt="" />
+                                    <div class="item-ribs"><img src="img/steak3.jpg" alt="" /></div>
                                     <h3 class="Name">CHEF'S SLICED STEAK (200GR)</h3>
                                     <p class="Gia_Ban">375.000 ₫</p>
                                     <p>
-                                        Thăn bò Mỹ nhập khẩu nướng. Dùng kèm bắp nướng, khoai tây múi chiên.
+                                        Thăn bò Mỹ nhập khẩu nướng. Dùng kèm bắp nướng, khoai tây múi.
                                     </p>
-                                    <button>Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                             </div>
                         </section>
                     </div>
-
+                </div>
+                <div class="Khung_Content_3">
+                    <div class="Background_Content_3">
+                        <div class="Khung_Content_3_1">
+                            <h4>Giỏ Hàng</h4>
+                            <span>(0 Sản phẩm)</span>
+                        </div>
+                        <hr>
+                        <div class="Khung_Content_3_2">
+                            <div class="Ava_Tron"></div>
+                            <span>Giỏ hàng của bạn đang rỗng, vui lòng đặt món</span>
+                        </div>
+                        <hr>
+                        <div class="Khung_Content_3_3">
+                            <div class="Noidung_Content_3_1">
+                                <div class="Noidung_Content_3_1_A"><span>Thành Tiền:</span></div>
+                                <div class="Noidung_Content_3_1_B"><span>Thuế:</span></div>
+                            </div>
+                            <div class="Noidung_Content_3_2">
+                                <div class="Noidung_Content_3_2_A"><span>Tổng cộng</span></div>
+                                <div class="Noidung_Content_3_2_B">
+                                    <div class="Xem_Gio_Hang"><a href="">Xem giỏ hàng</a></div>
+                                    <div class="Thanh_Toan"><button>Thanh toán</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="Khung_Content_3">
-                <div class="Background_Content_3">
-                    <div class="Khung_Content_3_1">
-                        <h4>Giỏ Hàng</h4>
-                        <span>(0 Sản phẩm)</span>
-                    </div>
-                    <hr>
-                    <div class="Khung_Content_3_2">
-                        <div class="Ava_Tron"></div>
-                        <span>Giỏ hàng của bạn đang rỗng, vui lòng đặt món</span>
-                    </div>
-                    <hr>
-                    <div class="Khung_Content_3_3">
-                        <div class="Noidung_Content_3_1">
-                            <div class="Noidung_Content_3_1_A"><span>Thành Tiền:</span></div>
-                            <div class="Noidung_Content_3_1_B"><span>Thuế:</span></div>
+        </section>
+    </div>
+
+    <div class="Bg9" style="background-image: url(img/Bg4.jpg);">
+        <div class="BgBanner">
+            <section id="khuyenmai">
+                <div class="promotion-banner">
+                    <div class="content-header">
+                        <div class="img-header">
+                            <img src="img/Delivery.jpg" alt="">
                         </div>
-                        <div class="Noidung_Content_3_2">
-                            <div class="Noidung_Content_3_2_A"><span>Tổng cộng</span></div>
-                            <div class="Noidung_Content_3_2_B">
-                                <div class="Xem_Gio_Hang"><a href="">Xem giỏ hàng</a></div>
-                                <div class="Thanh_Toan"><button>Thanh toán</button></div>
+                    </div>
+                </div>
+            </section>
+            <div class="pomotion-content">
+                <div class="container p-0">
+                    <div class="list-promo">
+                        <h3>KHUYẾN MÃI HÔM NAY</h3>
+                        <div class="decor-title"></div>
+                        <div class="banner1">
+                            <div class="card">
+                                <div class="card1">
+                                    <img src="img/promo.jpg" alt="">
+                                </div>
+                                <div class="card2">
+                                    <div class="ndcard">
+                                        <div class="in4">
+                                            <span>Khuyến Mãi
+                                                <label for="">Deal</label>
+                                            </span>
+                                            <h5>THỨ 6 HÀNG TUẦN</h5>
+                                            <div>
+                                                2 Pizza lớn (L) + 2 Coke chỉ với 295.000đ
+                                                <br>
+                                                Áp dụng pizza từ #1 - #6
+                                                <br>
+                                                * Không áp dụng kèm các chương trình khuyến mãi khác
+                                                <br>
+                                                * Giá trên chưa bao gồm VAT
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="button">
+                                            <button>Chọn mua</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card3">
+                                    <div class="day">Thứ 6</div>
+                                    <div class="day2">Hằng tuần</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner1">
+                            <div class="card">
+                                <div class="card1">
+                                    <img src="img/promo2.jpg" alt="">
+                                </div>
+                                <div class="card2">
+                                    <div class="ndcard">
+                                        <div class="in4">
+                                            <span>Khuyến Mãi
+                                                <label for="">Deal</label>
+                                            </span>
+                                            <h5>THỨ 3 HÀNG TUẦN</h5>
+                                            <div>
+                                                Mua bất kỳ 1 pizza cỡ lớn (L) hoặc cỡ Gia đình (FA)
+
+                                                <br>
+                                                Tặng 1 pizza (từ #1 - #6)
+                                                <br>
+                                                * Áp dụng cho giao hàng và mua mang về
+                                                <br>
+                                                * Không áp dụng kèm các chương trình khuyến mãi khác
+                                                <br>
+                                                * Giá trên chưa bao gồm VAT
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="button">
+                                            <button>Chọn mua</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card3">
+                                    <div class="day">Thứ 3</div>
+                                    <div class="day2">Hàng tuần</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner1">
+                            <div class="card">
+                                <div class="card1">
+                                    <img src="img/promo3.jpg" alt="">
+                                </div>
+                                <div class="card2">
+                                    <div class="ndcard">
+                                        <div class="in4">
+                                            <span>Khuyến Mãi Offline
+                                                <label for="">Deal</label>
+                                            </span>
+                                            <h5>COUPLE’S COMBO 285K</h5>
+                                            <div>
+                                                - Chef’s Mixed Plate
+                                                <br>
+                                                - Green Salad
+                                                <br>
+                                                - Any Regular Pizza (#1 - #6)
+                                                <br>
+                                                * Áp dụng dùng bữa tại nhà hàng
+                                                <br>
+                                                * Giá chưa bao gồm VAT
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="button">
+                                            <button>Chọn mua</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card3 ComboCouple">
+                                    <div class="day">2024</div>
+                                    <div class="day2">Mỗi ngày</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner1">
+                            <div class="card">
+                                <div class="card1">
+                                    <img src="img/promo4.jpg" alt="">
+                                </div>
+                                <div class="card2">
+                                    <div class="ndcard">
+                                        <div class="in4">
+                                            <span>Khuyến Mãi Offline
+                                                <label for="">Deal</label>
+                                            </span>
+                                            <h5>TIỆC ÂU COMBO 499K
+                                            </h5>
+                                            <div>
+                                                - Chef's Sliced Steak
+                                                <br>
+                                                - Pizza Cỡ Lớn (#1 - #6) - Korean Chicken Fried
+                                                <br>
+                                                - Garlic Cheese Loaf
+                                                <br>
+                                                - Korean Fried Chicken
+                                                <br>
+                                                *Áp dụng cho dùng bữa tại nhà hàng
+                                                <br>
+                                                *Giá trên chưa bao gồm thuế VAT
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="button">
+                                            <button>Chọn mua</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card3 ComboTiecAu">
+                                    <div class="day">2024</div>
+                                    <div class="day2">Mỗi ngày</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -395,192 +564,202 @@
         </div>
     </div>
     <div class="Bg5" style="background-image: url(img/Bg4.jpg);">
-        <div class="Container_VeChungToi">
-            <h1 class="VeChungToi">Về Chúng Tôi,</h1>
-            <p>Từ khi thành lập vào năm 1996 đến nay, Al Fresco's đã mang đến cho quý khách
-                hàng tại Việt Nam những trải
-                nghiệm ăn uống chất lượng tuyệt hảo với mức chi phí hợp lý. Chuỗi nhà hàng Al Fresco’s đã tạo
-                dựng được
-                danh tiếng với những món ăn ngon như bít tết, Pizza, Mỳ Ý và sườn nướng, kèm theo đó là thực đơn
-                thức
-                uống phong phú từ các loại nước ép trái cây và sinh tố tươi mát đến các loại bia nội địa, bia
-                nhập khẩu
-                và những loại rượu vang ngon nổi tiếng.</p>
-            <div class="khungslide">
-                <div class="dskhung">
-                    <ul class="slide">
-                        <li class="_1slide hienra">
-                            <img src="img/Store.jpg" alt="" class="anh">
-                        </li>
-                        <li class="_1slide">
-                            <img src="img/Store2.jpg" alt="" class="anh">
-                        </li>
-                        <li class="_1slide">
-                            <img src="img/Store3.jpg" alt="" class="anh">
-                        </li>
-                        <li class="_1slide">
-                            <img src="img/Store4.jpg" alt="" class="anh">
-                        </li>
-                        <li class="_1slide">
-                            <img src="img/Store5.jpg" alt="" class="anh">
-                        </li>
-                    </ul>
-                </div>
+        <section id="vechungtoi">
+            <div class="Container_VeChungToi">
+                <h1 class="VeChungToi">Về Chúng Tôi,</h1>
+                <p>Từ khi thành lập vào năm 1996 đến nay, Al Fresco's đã mang đến cho quý khách
+                    hàng tại Việt Nam những trải
+                    nghiệm ăn uống chất lượng tuyệt hảo với mức chi phí hợp lý. Chuỗi nhà hàng Al Fresco’s đã tạo
+                    dựng được
+                    danh tiếng với những món ăn ngon như bít tết, Pizza, Mỳ Ý và sườn nướng, kèm theo đó là thực đơn
+                    thức
+                    uống phong phú từ các loại nước ép trái cây và sinh tố tươi mát đến các loại bia nội địa, bia
+                    nhập khẩu
+                    và những loại rượu vang ngon nổi tiếng.</p>
+                <div class="khungslide">
+                    <div class="dskhung">
+                        <ul class="slide">
+                            <li class="_1slide hienra">
+                                <img src="img/Store.jpg" alt="" class="anh">
+                            </li>
+                            <li class="_1slide">
+                                <img src="img/Store2.jpg" alt="" class="anh">
+                            </li>
+                            <li class="_1slide">
+                                <img src="img/Store3.jpg" alt="" class="anh">
+                            </li>
+                            <li class="_1slide">
+                                <img src="img/Store4.jpg" alt="" class="anh">
+                            </li>
+                            <li class="_1slide">
+                                <img src="img/Store5.jpg" alt="" class="anh">
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="cacic">
-                    <i class="fa fa-arrow-circle-right phai" aria-hidden="true"></i>
-                    <i class="fa fa-chevron-circle-left trai" aria-hidden="true"></i>
+                    <div class="cacic">
+                        <i class="fa fa-arrow-circle-right phai" aria-hidden="true"></i>
+                        <i class="fa fa-chevron-circle-left trai" aria-hidden="true"></i>
+                    </div>
                 </div>
+                <p>Al Fresco’s cũng được đông đảo các gia đình người Việt, các gia đình người
+                    nước ngoài, các cặp đôi và các
+                    nhóm bạn trẻ yêu thích. Với thiết kế sạch sẽ, thoải mái và tạo cảm giác gần gũi, nhà hàng như
+                    một ốc đảo
+                    chào đón bạn đến thưởng thức những món ăn ngon tuyệt hảo và dịch vụ khách hàng tuyệt vời sau
+                    những giờ
+                    phút hối hả và bận rộn của cuộc sống hàng ngày.</p>
+                <p>&nbsp;</p>
+                <p>Sở hữu chuỗi nhà hàng trải dài khắp cả nước tại Thành phố Hồ Chí Minh, Hà Nội, Hải Phòng và Đà
+                    Nẵng, Al
+                    Fresco’s là nơi cung cấp dịch vụ ăn uống đạt tiêu chuẩn tốt nhất với mức giá hợp lý. Ngoài ra,
+                    với đội
+                    ngũ nhân viên giao hàng riêng, chúng tôi cũng mang đến cho quý khách dịch vụ giao thức ăn nhanh
+                    và hiệu
+                    quả.</p>
+                <p>&nbsp;</p>
+                <p>Chuỗi nhà hàng chúng tôi chuyên phục vụ các món ăn nổi tiếng của nền ẩm thực Ý. Pizza chính là
+                    thế mạnh
+                    của Al Fresco's với những ưu đãi dài hạn khi dùng bữa tại nhà hàng hoặc mua mang về hay chương
+                    trình mua
+                    1 tặng 1 Pizza luôn được nhiều người yêu thích nhất.</p>
+                <p>&nbsp;</p>
+                <p>Al Fresco’s cũng là một trong những nhà hàng đầu tiên tại Việt Nam phục vụ món bít tết có mức giá
+                    hợp lý
+                    với các loại thịt bò ngon nhất được chọn lựa từ Úc, New Zealand và Hoa Kỳ (đạt tiêu chuẩn USDA).
+                    Bên
+                    cạnh đó, Al Fresco’s còn có một món đặc trưng khác là món sườn nướng mềm, mọng nước được nhiều
+                    người yêu
+                    thích.</p>
+                <p>&nbsp;</p>
+                <p>"Chỉ bằng một cú nhấp chuột, bạn có thể đặt giao hàng tận nơi các món ăn ngon của Al Fresco's qua
+                    địa
+                    chỉ&nbsp;"
+                    <strong><a href="">www.alfrescos.com.vn</a></strong>
+                    "&nbsp;hoặc tải app tại&nbsp;"
+                    <a href=""><strong>App Store</strong></a>
+                    "&nbsp;hoặc&nbsp;"
+                    <a href=""><strong>Google Play</strong></a>
+                    "&nbsp;ngay hôm nay. Bạn cũng có thể đăng ký "
+                    <span><strong>CHƯƠNG TRÌNH KHÁCH HÀNG THÀNH VIÊN</strong></span>
+                    " để tận hưởng thêm nhiều ưu đãi hấp dẫn từ Al Fresco's!"
+                </p>
             </div>
-            <p>Al Fresco’s cũng được đông đảo các gia đình người Việt, các gia đình người
-                nước ngoài, các cặp đôi và các
-                nhóm bạn trẻ yêu thích. Với thiết kế sạch sẽ, thoải mái và tạo cảm giác gần gũi, nhà hàng như
-                một ốc đảo
-                chào đón bạn đến thưởng thức những món ăn ngon tuyệt hảo và dịch vụ khách hàng tuyệt vời sau
-                những giờ
-                phút hối hả và bận rộn của cuộc sống hàng ngày.</p>
-            <p>&nbsp;</p>
-            <p>Sở hữu chuỗi nhà hàng trải dài khắp cả nước tại Thành phố Hồ Chí Minh, Hà Nội, Hải Phòng và Đà
-                Nẵng, Al
-                Fresco’s là nơi cung cấp dịch vụ ăn uống đạt tiêu chuẩn tốt nhất với mức giá hợp lý. Ngoài ra,
-                với đội
-                ngũ nhân viên giao hàng riêng, chúng tôi cũng mang đến cho quý khách dịch vụ giao thức ăn nhanh
-                và hiệu
-                quả.</p>
-            <p>&nbsp;</p>
-            <p>Chuỗi nhà hàng chúng tôi chuyên phục vụ các món ăn nổi tiếng của nền ẩm thực Ý. Pizza chính là
-                thế mạnh
-                của Al Fresco's với những ưu đãi dài hạn khi dùng bữa tại nhà hàng hoặc mua mang về hay chương
-                trình mua
-                1 tặng 1 Pizza luôn được nhiều người yêu thích nhất.</p>
-            <p>&nbsp;</p>
-            <p>Al Fresco’s cũng là một trong những nhà hàng đầu tiên tại Việt Nam phục vụ món bít tết có mức giá
-                hợp lý
-                với các loại thịt bò ngon nhất được chọn lựa từ Úc, New Zealand và Hoa Kỳ (đạt tiêu chuẩn USDA).
-                Bên
-                cạnh đó, Al Fresco’s còn có một món đặc trưng khác là món sườn nướng mềm, mọng nước được nhiều
-                người yêu
-                thích.</p>
-            <p>&nbsp;</p>
-            <p>"Chỉ bằng một cú nhấp chuột, bạn có thể đặt giao hàng tận nơi các món ăn ngon của Al Fresco's qua
-                địa
-                chỉ&nbsp;"
-                <strong><a href="">www.alfrescos.com.vn</a></strong>
-                "&nbsp;hoặc tải app tại&nbsp;"
-                <a href=""><strong>App Store</strong></a>
-                "&nbsp;hoặc&nbsp;"
-                <a href=""><strong>Google Play</strong></a>
-                "&nbsp;ngay hôm nay. Bạn cũng có thể đăng ký "
-                <span><strong>CHƯƠNG TRÌNH KHÁCH HÀNG THÀNH VIÊN</strong></span>
-                " để tận hưởng thêm nhiều ưu đãi hấp dẫn từ Al Fresco's!"
-            </p>
-        </div>
+        </section>
     </div>
 
     <div class="Bg6" style="background-image: url(img/Bg4.jpg);">
-        <div class="restaurant-container">
-            <h1 style="color: orange;">HỆ THỐNG NHÀ HÀNG CỦA CHÚNG TÔI</h1>
-            <div class="restaurant">
-                <div class="restaurant-item">
-                    <img src="img/NH1.jpg" alt="nhà hàng" class="hover-image" />
-                    <h5>⭐ Al Fresco's Estella Place</h5>
-                    <p>L3–02, Số 88 Đường Song Hành, P An Phú, Tp Thủ Đức, TPHCM</p>
-                    <p>📞 Liên hệ: 028 35356470</p>
-                    <p>✉️ Email: alfrescos-hcm.estella@afg.vn</p>
-                    <p>🕒 Thứ 2 - Chủ nhật, 10:00 - 22:00</p>
-                </div>
-                <div class="restaurant-item">
-                    <img src="img/NH2.jpg" alt="nhà hàng" class="hover-image" />
-                    <h5>⭐ Al Fresco's Aeon Mall Tân Phú</h5>
-                    <p>
-                        Lô T27, Lầu 3, Aeon Mall Tân Phú, 30 Bờ Bao Tân Thắng, Celadon City,
-                        Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
-                    </p>
-                    <p>📞 Liên hệ: 028 3620 8401</p>
-                    <p>✉️ Email: alfrescos-hcm.tp@afg.vn</p>
-                    <p>🕒 Thứ 2 - Chủ nhật, 10:00 - 22:00</p>
-                </div>
-                <div class="restaurant-item">
-                    <img src="img/NH3.jpg" alt="nhà hàng" class="hover-image" />
-                    <h5>⭐ Al Fresco's Vạn Hạnh Mall</h5>
-                    <p>
-                        Tầng 6, Lô 6-11, TTTM Vạn Hạnh, 11 Sư Vạn Hạnh Nối Dài, Phường 10,
-                        Quận 10, Hồ Chí Minh, Việt Nam
-                    </p>
-                    <p>📞 Liên hệ: 028 3636 2656</p>
-                    <p>✉️ Email: alfrescos-hcm.vhm@afg.vn</p>
-                    <p>🕒 Thứ 2 - Chủ nhật, 09:30 - 22:00</p>
-                </div>
-                <div class="restaurant-item">
-                    <img src="img/NH4.jpg" alt="nhà hàng" class="hover-image" />
-                    <h5>⭐ Al Fresco's Phan Xích Long</h5>
-                    <p>199 Phan Xích Long, phường 2, Phú Nhuận, Hồ Chí Minh, Việt Nam</p>
-                    <p>📞 Liên hệ: 028 3517 2568</p>
-                    <p>✉️ Email: alfrescos-hcm.pxl@afg.vn</p>
-                    <p>🕒 Thứ 2 - Chủ nhật, 10:00 - 22:00</p>
+        <section id="cuahang">
+            <div class="restaurant-container">
+                <h1 style="color: orange;">HỆ THỐNG NHÀ HÀNG CỦA CHÚNG TÔI</h1>
+                <div class="restaurant">
+                    <div class="restaurant-item">
+                        <img src="img/NH1.jpg" alt="nhà hàng" class="hover-image" />
+                        <h5>⭐ Al Fresco's Estella Place</h5>
+                        <p>L3–02, Số 88 Đường Song Hành, P An Phú, Tp Thủ Đức, TPHCM</p>
+                        <p>📞 Liên hệ: 028 35356470</p>
+                        <p>✉️ Email: alfrescos-hcm.estella@afg.vn</p>
+                        <p>🕒 Thứ 2 - Chủ nhật, 10:00 - 22:00</p>
+                    </div>
+                    <div class="restaurant-item">
+                        <img src="img/NH2.jpg" alt="nhà hàng" class="hover-image" />
+                        <h5>⭐ Al Fresco's Aeon Mall Tân Phú</h5>
+                        <p>
+                            Lô T27, Lầu 3, Aeon Mall Tân Phú, 30 Bờ Bao Tân Thắng, Celadon City,
+                            Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
+                        </p>
+                        <p>📞 Liên hệ: 028 3620 8401</p>
+                        <p>✉️ Email: alfrescos-hcm.tp@afg.vn</p>
+                        <p>🕒 Thứ 2 - Chủ nhật, 10:00 - 22:00</p>
+                    </div>
+                    <div class="restaurant-item">
+                        <img src="img/NH3.jpg" alt="nhà hàng" class="hover-image" />
+                        <h5>⭐ Al Fresco's Vạn Hạnh Mall</h5>
+                        <p>
+                            Tầng 6, Lô 6-11, TTTM Vạn Hạnh, 11 Sư Vạn Hạnh Nối Dài, Phường 10,
+                            Quận 10, Hồ Chí Minh, Việt Nam
+                        </p>
+                        <p>📞 Liên hệ: 028 3636 2656</p>
+                        <p>✉️ Email: alfrescos-hcm.vhm@afg.vn</p>
+                        <p>🕒 Thứ 2 - Chủ nhật, 09:30 - 22:00</p>
+                    </div>
+                    <div class="restaurant-item">
+                        <img src="img/NH4.jpg" alt="nhà hàng" class="hover-image" />
+                        <h5>⭐ Al Fresco's Phan Xích Long</h5>
+                        <p>199 Phan Xích Long, phường 2, Phú Nhuận, Hồ Chí Minh, Việt Nam</p>
+                        <p>📞 Liên hệ: 028 3517 2568</p>
+                        <p>✉️ Email: alfrescos-hcm.pxl@afg.vn</p>
+                        <p>🕒 Thứ 2 - Chủ nhật, 10:00 - 22:00</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
     </div>
-    <!-- <div class="Bg7"> -->
-    <div class="klienhe">
-        <div class="bglienhe">
-            <img src="img/nenlien1.png" alt="" class="alienhe1">
-            <div class="ndlienhe">
-                <div class="nd1lienhe">Trang chủ</div>
-                <div class="nd2lienhe">/ Liên hệ</div>
-            </div>
-        </div>
-        <div class="bglienhe1">
-            <img src="img/nenlienhe2.jpg" alt="" class="alienhe2">
-            <div class="ktronglienhe">
-                <div class="ktronglienhetrai">
-                    <img src="img/nenlienhe3.jpg" alt="" class="alienhe3">
-                </div>
-                <div class="ktronglienhephai">
-                    <div class="ktronglienhephai1">
-                        <p class="nd3lienhe">Liên Hệ Chúng Tôi</p>
-                        <div class="gachchan1"></div>
-                    </div>
-                    <div class="ktronglienhephai2">
-                        <p class="nd4lienhe">Có câu hỏi hay bình luận?Hãy để lại lời nhắn bên dưới,chúng tôi sẻ trả
-                            lời
-                            trong thời gian sớm nhất</p>
-                    </div>
-                    <div class="ktronglienhephai3">
-                        <input type="radio" name="sex" values="dat hang online" checked>
-                        <p class="nd5lienket">Đặt hàng online</p>
-                        <br>
-                        <input type="radio" name="sex" values="thanh vien" checked>
-                        <p class="nd5lienket">THÀNH VIÊN</p>
-                        <br>
-                    </div>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder=" " required>
-                            <label for="name">Tên</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="sdt" name="sdt" placeholder=" " required>
-                            <label for="sdt">Số điện thoại</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="Email" name="Email" placeholder=" " required>
-                            <label for="Email">Email</label>
-                        </div>
-                        <div class="form-group ">
-                            <input type="text1" id="TN" name="TN" placeholder=" " required>
-                            <label for="TN">Tin nhắn</label>
-                        </div>
-                        <div class="form-group">
-                            <input class="ip2" type="submit" value="Gửi Email">
-                        </div>
-                    </form>
+    <div class="Bg7">
+        <div class="klienhe">
+            <div class="bglienhe">
+                <img src="img/nenlien1.png" alt="" class="alienhe1">
+                <div class="ndlienhe">
+                    <div class="nd1lienhe">Trang chủ</div>
+                    <div class="nd2lienhe">/ Liên hệ</div>
                 </div>
             </div>
+            <section id="lienhe">
+                <div class="bglienhe1">
+                    <img src="img/nenlienhe2.jpg" alt="" class="alienhe2">
+                    <div class="ktronglienhe">
+                        <div class="ktronglienhetrai">
+                            <img src="img/nenlienhe3.jpg" alt="" class="alienhe3">
+                        </div>
+                        <div class="ktronglienhephai">
+                            <div class="ktronglienhephai1">
+                                <p class="nd3lienhe">Liên Hệ Chúng Tôi</p>
+                                <div class="gachchan1"></div>
+                            </div>
+                            <div class="ktronglienhephai2">
+                                <p class="nd4lienhe">Có câu hỏi hay bình luận?Hãy để lại lời nhắn bên dưới,chúng tôi
+                                    sẻ trả
+                                    lời
+                                    trong thời gian sớm nhất</p>
+                            </div>
+                            <div class="ktronglienhephai3">
+                                <input type="radio" name="sex" values="dat hang online" checked>
+                                <p class="nd5lienket">Đặt hàng online</p>
+                                <br>
+                                <input type="radio" name="sex" values="thanh vien" checked>
+                                <p class="nd5lienket">THÀNH VIÊN</p>
+                                <br>
+                            </div>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" placeholder=" " required>
+                                    <label for="name">Tên</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="sdt" name="sdt" placeholder=" " required>
+                                    <label for="sdt">Số điện thoại</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="Email" name="Email" placeholder=" " required>
+                                    <label for="Email">Email</label>
+                                </div>
+                                <div class="form-group ">
+                                    <input type="text1" id="TN" name="TN" placeholder=" " required>
+                                    <label for="TN">Tin nhắn</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="ip2" type="submit" value="Gửi Email">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
+        <div id="backtotop"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
     </div>
-    <!-- </div> -->
+    <script src="Doan3.js"></script>
     <div class="Bg8">
         <footer class="footer">
             <div class="footer-text">
