@@ -1,0 +1,1807 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Bg {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 7;
+}
+
+.Khung_Menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5px;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.Left,
+.Right {
+  display: flex;
+  align-items: center;
+}
+
+.Menu_Left {
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.Menu_Left_1 {
+  display: flex;
+  align-items: center;
+}
+
+.Menu_Left_1 img {
+  width: 30px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.TV {
+  padding-right: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.Menu_Left_List {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  top: 105%;
+  left: 0;
+  list-style: none;
+  width: 150px;
+  z-index: 7;
+}
+
+.Menu_Left_List li {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.Menu_Left_List li img {
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.Menu_Left_List li:hover {
+  background-color: rgb(86, 86, 86);
+}
+
+.Menu_Left:hover .Menu_Left_List {
+  visibility: visible;
+  opacity: 1;
+}
+
+.Lang {
+  text-decoration: none;
+  color: white;
+}
+
+.HCM {
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 3.5px;
+}
+
+.HCM_1 {
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  border: 3.5px solid rgb(170, 160, 160);
+  box-sizing: border-box;
+  border-radius: 7px;
+  display: flex;
+}
+
+.HCM_2 {
+  font-weight: bold;
+  color: rgb(205, 205, 205);
+  text-transform: uppercase;
+  font-size: 15px;
+  padding-right: 20px;
+}
+
+.muiten {
+  /* mũi tên */
+  margin-left: 5px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.Menu_Left_List_2 {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid gainsboro;
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  width: 130px;
+  z-index: 2;
+}
+
+.Menu_Left_List_2 li {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.Menu_Left_List_2 li:hover {
+  background-color: beige;
+}
+
+.HCM:hover .Menu_Left_List_2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Lang_2 {
+  justify-content: left !important;
+  text-align: left !important;
+  text-decoration: none;
+  color: white;
+}
+
+.Slide_Menu {
+  cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  margin-top: 10px;
+  left: -250px;
+  /* ẩn menu ra ngoài */
+  width: 250px;
+  height: 100%;
+  background-color: rgb(203, 71, 0);
+  color: white;
+  transition: left 0.3s ease;
+  /* hiệu ứng trượt */
+}
+
+.Slide_Menu.active {
+  cursor: pointer;
+  left: 0;
+  /* hiển thị menu */
+}
+
+.Slide_Menu > ul > li {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.Slide_Menu > ul {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.fa.fa-cutlery {
+  display: none;
+}
+
+.fa.fa-cutlery {
+  padding-right: 10px;
+  margin-left: -30px;
+  font-size: 20px;
+  color: rgb(112, 112, 112);
+}
+
+.Slide_Menu > ul > li > a:hover .fa.fa-cutlery {
+  display: inline-block;
+  color: rgba(156, 83, 0, 0.851);
+  margin-right: 15px;
+}
+
+.Slide_Menu > ul > li > a {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 50px;
+  text-decoration: none;
+  color: rgb(112, 112, 112);
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.Slide_Menu > ul > li > a:hover {
+  color: rgba(156, 83, 0, 0.851);
+}
+
+.KhungIc {
+  padding-right: 100px;
+  margin-left: 50px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.fa-bars,
+.fa-times {
+  font-size: 30px;
+  /* Đặt kích thước chung cho cả dấu X và 3 gạch */
+  color: black;
+  /* Màu đen cho cả hai biểu tượng */
+}
+
+.Logo img {
+  margin-right: 80px;
+  width: 150px;
+  height: 85px;
+}
+
+.rewards {
+  padding-right: 40px;
+  width: 30%;
+  height: 20%;
+  align-content: center;
+}
+
+.cong {
+  color: red;
+  font-size: 25px;
+}
+
+.Thanhvien {
+  color: yellow;
+  text-transform: uppercase;
+}
+
+.Thanhvien:hover {
+  cursor: pointer;
+}
+
+.ND {
+  align-content: center;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.ND1 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ND1:hover {
+  color: rgb(187, 69, 0);
+  cursor: pointer;
+}
+
+.ic {
+  color: white;
+}
+
+.Khong {
+  border-radius: 50%;
+  color: orange;
+}
+
+.style_ic {
+  display: flex;
+  font-size: 30px;
+  margin-left: 50px;
+  padding-top: 20px;
+}
+
+.ic_1,
+.ic_3,
+.ic_2 {
+  color: gray;
+  padding-right: 30px;
+}
+
+.style_ic > .ic_1 > i:hover {
+  color: rgb(64, 149, 228);
+}
+
+.style_ic > .ic_3 > i:hover {
+  color: red;
+}
+
+.style_ic > .ic_2 > i:hover {
+  background: linear-gradient(to right, #c13584, #fd1d1d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 105%;
+}
+
+.Bg2 {
+  width: 100%;
+  height: 800px;
+  margin-top: 100px;
+}
+
+.Khung_Menu_2 {
+  width: 90%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  color: white;
+}
+
+.Top {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  box-sizing: border-box;
+}
+
+.Bot {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  box-sizing: border-box;
+}
+
+.Top_Left > img {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+
+.Top_Left {
+  height: 100%;
+  width: 65.85%;
+}
+
+.Banner_KM {
+  position: relative;
+  z-index: 1;
+  margin-top: -10px;
+  margin-left: 0px;
+  height: 40px;
+  width: 100%;
+  background-color: #eb5e01;
+}
+
+.Banner_KM:hover .KM {
+  cursor: pointer;
+  color: rgb(255, 255, 0);
+}
+
+.Banner_Pizza,
+.Banner_Starters {
+  position: relative;
+  z-index: 1;
+  height: 40px;
+  width: 104%;
+  margin-top: -42px;
+  margin-left: 0px;
+  background-color: #eb5e01;
+}
+
+.Banner_Pasta,
+.Banner_BBQ,
+.Banner_Salads {
+  position: relative;
+  z-index: 1;
+  margin-top: -40px;
+  height: 40px;
+  background-color: #eb5e01;
+}
+
+.Banner_Pasta {
+  width: 100%;
+}
+
+.Banner_BBQ,
+.Banner_Salads {
+  width: 105%;
+}
+
+.KM,
+.Pizza,
+.Starters,
+.BBQ,
+.Salads,
+.Pasta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+  font-size: 30px;
+}
+
+.Top_Right {
+  width: 31.5%;
+  height: auto;
+}
+
+.Right_Top,
+.Right_Bot {
+  height: auto;
+  width: auto;
+  margin-left: 9%;
+}
+
+.Right_Bot {
+  padding-top: 2.5%;
+}
+
+.Picutre_Starters,
+.Picutre_Pizza {
+  height: 205px;
+  width: 104%;
+}
+
+.Right_Top > .Picutre_Pizza > img,
+.Right_Bot > .Picutre_Starters > img {
+  position: relative;
+  z-index: 0;
+  object-fit: cover;
+}
+
+.Right_Top,
+.Right_Bot,
+.Top_Left:hover {
+  cursor: pointer;
+}
+
+.Bot {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  margin-top: -3%;
+  margin-left: 0%;
+  box-sizing: border-box;
+}
+
+.Bot_Left,
+.Bot_Mid,
+.Bot_Right {
+  width: 30%;
+}
+
+.Bot_Mid {
+  height: 100%;
+  padding-left: 4.5%;
+}
+
+.Bot_Left {
+  height: 100%;
+  margin-left: -0.1%;
+}
+
+.Bot_Right {
+  height: 100%;
+  padding-left: 4.1%;
+}
+
+.Bot_Left > img {
+  margin-top: -3px;
+  height: 83.5%;
+  width: 105%;
+}
+
+.Bot_Mid > img {
+  height: 82.5%;
+  width: 105%;
+}
+
+.Bot_Right > img {
+  height: 82.5%;
+  width: 100%;
+}
+
+.Banner_BBQ > .BBQ:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 0);
+}
+
+.Banner_Salads > .Salads:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 0);
+}
+
+.Banner_Pasta > .Pasta:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 0);
+}
+
+.Banner_Pizza:hover .Pizza,
+.Banner_Starters:hover .Starters {
+  cursor: pointer;
+  color: rgb(255, 255, 0);
+}
+
+.Bot_Left > img:hover {
+  cursor: pointer;
+}
+
+.Bot_Mid > img:hover {
+  cursor: pointer;
+}
+
+.Bot_Right > img:hover {
+  cursor: pointer;
+}
+
+.Bg3 {
+  width: 100%;
+  z-index: 6;
+  position: sticky;
+  top: 100px;
+  height: 100%;
+}
+
+section {
+  scroll-margin-top: 150px; /* Điều chỉnh theo chiều cao của header */
+}
+
+#Khung_Menu_3 {
+  position: relative;
+  height: 100%;
+  margin-top: -160px;
+  width: 100%;
+  align-items: center;
+  padding: 5px 0;
+}
+
+#Khung_Menu_3 > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#Khung_Menu_3 > ul > li {
+  position: relative;
+}
+
+#Khung_Menu_3 > ul > li > a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 10px; /* Khoảng cách bên trong liên kết */
+  z-index: 1; /* Đảm bảo chữ nằm trên vòng tròn */
+  transition: color 0.3s ease;
+  display: inline-block; /* Để pseudo-element bao quanh đúng nội dung */
+}
+
+/* Vòng tròn xuất hiện khi hover */
+#Khung_Menu_3 ul li a::before {
+  content: ""; /* Phần tử giả */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%; /* Độ rộng vòng tròn bằng nội dung chữ */
+  height: 100%; /* Chiều cao vòng tròn bằng nội dung chữ */
+  border: 5px solid rgb(173, 173, 173); /* Đường viền vòng tròn */
+  border-radius: 50%; /* Tạo hình tròn */
+  transform: translate(-50%, -50%) scale(0); /* Thu nhỏ ban đầu */
+  transition: all 0.3s ease; /* Hiệu ứng mở rộng mượt mà */
+  z-index: 0; /* Vòng tròn nằm dưới chữ */
+}
+
+#Khung_Menu_3 ul li a:hover::before {
+  transform: translate(-50%, -50%) scale(1); /* Hiển thị vòng tròn */
+  box-shadow: 0 0 10px rgb(99, 99, 99), 0 0 20px rgb(99, 99, 99); /* Hiệu ứng ánh sáng xung quanh vòng tròn */
+}
+
+.Bg4 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.Khung_Content_1 {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Khung_Content_2 {
+  width: 70%;
+  height: 100%;
+}
+
+.Khung_Content_2 > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Content_Pizza {
+  text-align: center;
+  flex: 1;
+}
+
+.Tieude_Pizza {
+  background-color: rgb(147, 145, 145);
+  opacity: 50%;
+  padding: 10px;
+}
+
+.Container_Cont {
+  flex-wrap: wrap;
+}
+
+.Cont {
+  font-size: 24px;
+  color: rgb(45, 42, 42);
+}
+
+.Cont_2 {
+  color: rgb(45, 42, 42);
+}
+
+hr {
+  background-color: rgb(101, 101, 101);
+  margin-top: 10px;
+}
+
+h2 {
+  padding-top: 20px;
+  text-align: center;
+  color: #f05a28;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+p {
+  text-align: center;
+  font-size: 1em;
+  color: #666;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px 20px 40px 20px;
+}
+
+.menu-item {
+  height: 88%;
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 10px #dedede;
+  transition: all 0.3s linear;
+}
+
+.menu-item:hover .item-pizza,
+.menu-item:hover .item-starters,
+.menu-item:hover .item-bbq,
+.menu-item:hover .item-salads,
+.menu-item:hover .item-pasta,
+.menu-item:hover .item-ribs {
+  display: block;
+  transform: scale(1.1);
+  transition: all 0.4s cubic-bezier(0, 0, 1, 1);
+}
+
+.But {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: -18px 0px;
+  display: block;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 90%;
+  border-radius: 8px;
+}
+
+.menu-item h3 {
+  color: #333;
+  font-size: 1.2em;
+  margin: 15px 0 10px;
+}
+
+.menu-item p {
+  color: #999;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.menu-item button {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #f05a28;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.menu-item button:hover {
+  background-color: #d04e25;
+}
+
+.menu-item > .Gia_Ban {
+  color: rgb(255, 128, 0);
+}
+
+.Name:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+.Khung_Content_3 {
+  z-index: 5;
+  position: sticky;
+  top: 105px;
+  height: 100%;
+  width: 35%;
+}
+
+.Background_Content_3 {
+  height: 12.5%;
+  width: 100%;
+  margin-top: 60px;
+  background-color: rgb(0, 0, 0);
+  z-index: 3;
+}
+
+.Khung_Content_3_1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.Khung_Content_3_1 > h4 {
+  color: rgb(174, 173, 173);
+  text-transform: uppercase;
+}
+
+.Khung_Content_3_1 > span {
+  text-transform: uppercase;
+  color: #666;
+  padding-left: 10px;
+}
+
+.Khung_Content_3_2 {
+  padding-top: 10px;
+}
+
+.Khung_Content_3_2 > .Ava_Tron {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  margin-left: 40%;
+  background-color: rgb(172, 172, 172);
+}
+
+.Khung_Content_3_2 > span {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  color: #dad4d4;
+}
+
+.Khung_Content_3_3 {
+  width: 100%;
+  height: 250px;
+}
+
+.Noidung_Content_3_1 {
+  height: 50%;
+  width: 100%;
+  align-content: center;
+}
+
+.Noidung_Content_3_1_A,
+.Noidung_Content_3_1_B {
+  color: #d7cece;
+  font-size: 17px;
+  padding-left: 15px;
+}
+
+.Noidung_Content_3_1_A {
+  padding-bottom: 20px;
+}
+
+.Noidung_Content_3_2 {
+  height: 50%;
+  width: 100%;
+}
+
+.Noidung_Content_3_2_A {
+  font-size: 18px;
+  margin-left: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.Noidung_Content_3_2_B {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.Xem_Gio_Hang > a {
+  background-color: #000000;
+  border: none;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  border: 3px solid rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.Xem_Gio_Hang {
+  margin-top: 13px;
+  padding-right: 50px;
+}
+
+.Xem_Gio_Hang > a:hover {
+  background-color: rgb(255, 106, 0);
+  color: white;
+}
+
+.Thanh_Toan > button {
+  background-color: #000000;
+  border: none;
+  padding: 10px 20px;
+  color: rgb(255, 106, 0);
+  text-transform: uppercase;
+  border: 3px solid rgb(255, 106, 0);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.Thanh_Toan > button:hover {
+  background-color: rgb(255, 106, 0);
+  color: white;
+}
+
+.Bg5 {
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.Container_VeChungToi {
+  width: 60%;
+  height: 100%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  margin-left: 20%;
+}
+
+.VeChungToi {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+  color: orange;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.Container_VeChungToi > p {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.Container_VeChungToi > p > img {
+  width: 100%;
+  height: 100%;
+}
+
+.Container_VeChungToi > p > strong {
+  font-weight: 700;
+}
+
+.Container_VeChungToi > p > strong > a {
+  text-decoration: none;
+  color: #585858;
+}
+
+.Container_VeChungToi > p > a {
+  text-decoration: none;
+  color: #585858;
+}
+
+.Container_VeChungToi > p > strong > a:hover {
+  color: orange;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Container_VeChungToi > p > a > strong:hover {
+  color: orange;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Bg6 {
+  margin-top: -5%;
+  width: 100%;
+  height: 100%;
+}
+
+.restaurant-container {
+  padding-top: 4%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.restaurant {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.restaurant-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.restaurant-item {
+  display: grid;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 20%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.restaurant-item:hover {
+  cursor: pointer;
+}
+
+.restaurant-item h5 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.restaurant-item p {
+  float: left;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.restaurant-item p:nth-child(3) {
+  /*nth-child(3)= định dạng cho dòng thứ 3 trong thẻ restaurant-item*/
+  font-weight: bold;
+}
+
+.hover-image {
+  position: absolute;
+  transform: translateX(0%);
+  width: 100px;
+  height: auto;
+  max-width: 17%;
+  max-height: 200px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.restaurant-item:hover .hover-image {
+  opacity: 1;
+}
+
+.khungslide {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.dskhung {
+  list-style: none;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border-radius: 5px;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.anh {
+  width: 100%;
+  height: 400px;
+}
+
+.hienra {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+._1slide {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cacic {
+  position: absolute;
+  top: 140px;
+  left: 0px;
+  font-size: 40px;
+  width: 600px;
+}
+
+.trai {
+  margin-top: 40px;
+  float: left;
+  margin-left: 10px;
+}
+
+.phai {
+  margin-top: 40px;
+  float: right;
+  margin-right: -305px;
+}
+
+.khungslide:hover .trai,
+.phai {
+  cursor: pointer;
+}
+
+.trai:hover {
+  color: rgb(255, 145, 0);
+}
+
+.phai:hover {
+  color: rgb(255, 145, 0);
+}
+
+.form-group > .ip2:hover {
+  cursor: pointer;
+}
+
+.Bg7 {
+  width: 100%;
+  height: 700px;
+  position: relative;
+}
+
+.klienhe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bglienhe {
+  width: 100%;
+  height: 100px;
+}
+
+img.alienhe1 {
+  width: 100%;
+  height: 227px;
+}
+
+.ndlienhe {
+  display: flex;
+  margin-top: -12.5%;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 5px 5px 10px;
+  justify-content: flex-start;
+}
+
+.nd1lienhe {
+  color: white;
+  margin-left: 138px;
+  padding-right: 5px;
+  transition: 0.2s ease;
+}
+
+.nd2lienhe {
+  color: white;
+}
+
+.nd1lienhe:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+.nd2lienhe:hover {
+  cursor: pointer;
+}
+
+.bglienhe1 {
+  width: 100%;
+  height: 616px;
+}
+
+img.alienhe2 {
+  width: 100%;
+  height: 616px;
+}
+
+.ktronglienhe {
+  height: 534px;
+  width: 76%;
+  z-index: 2;
+  position: absolute;
+  margin-top: -585px;
+  display: flex;
+  margin-left: 186px;
+}
+
+.ktronglienhetrai {
+  width: 50%;
+  height: 534px;
+}
+
+img.alienhe3 {
+  width: 100%;
+  height: 410px;
+}
+
+.ktronglienhephai {
+  width: 47.2%;
+  height: 534px;
+  margin-left: 30px;
+}
+
+.ktronglienhephai1 {
+  width: 100%;
+  height: 40px;
+}
+
+p.nd3lienhe {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.gachchan1 {
+  border-bottom: 4px solid #da770b;
+  width: 100%;
+  margin-top: 1%;
+}
+
+.ktronglienhephai2 {
+  width: 100%;
+  height: 35px;
+  margin-top: 20px;
+}
+
+p.nd4lienhe {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ktronglienhephai3 {
+  width: 100%;
+  height: 28px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+input[type="radio"] {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+p.nd5lienket {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 15px;
+  margin-top: 2px;
+}
+
+.ktronglienhephai4 {
+  width: 544px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+/* Thiết lập form */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Thiết lập ô input */
+input[type="text"] {
+  width: 100%;
+  height: 30px;
+  padding-top: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text1"] {
+  width: 100%;
+  height: 75px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 16px;
+  top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: orangered;
+  color: white;
+}
+
+/* Thiết lập nhãn */
+label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  color: #aaa;
+  transition: 0.3s;
+  /* Thời gian chuyển đổi */
+  pointer-events: none;
+  /* Không ảnh hưởng khi nhấn vào */
+}
+
+/* Khi input được focus hoặc có dữ liệu, nhãn sẽ nhảy lên */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: 1px;
+  /* Nhãn nhảy lên trên */
+  left: 10px;
+  font-size: 12px;
+  /* Thu nhỏ chữ */
+  color: #333;
+  /* Thay đổi màu nhãn */
+}
+
+.Bg8 {
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.footer {
+  height: 100%;
+  background-color: #f05625;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  position: absolute;
+}
+
+.footer-text > .Text_1 {
+  margin-left: 10%;
+}
+
+.footer-text > .Text_2 {
+  line-height: 30px;
+  margin-top: 0%;
+}
+
+.footer p {
+  font-weight: 500;
+  color: white;
+  padding-left: 15px;
+  float: left;
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+.footer p:hover {
+  cursor: pointer;
+}
+
+.footer-text {
+  width: 70%;
+  height: 100%;
+  padding-top: 5px;
+  padding-left: 5px;
+  float: left;
+}
+
+.footer-icons {
+  float: right;
+  width: 30%;
+  height: auto;
+  margin-right: -5px;
+  padding-top: 30px;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+}
+
+.footer-icons img {
+  width: 100px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.Bg9 {
+  padding-top: 50px;
+  position: relative;
+  width: 100%;
+  min-height: 1600px;
+  height: auto;
+}
+
+.BgBanner {
+  position: absolute;
+}
+
+.img-header {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.promotion-banner {
+  color: white;
+}
+
+.promotion-banner .content-header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promotion-banner .img-header img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.promotion-banner .content {
+  margin-top: -40px;
+  font-size: 16px;
+  z-index: 10;
+  position: absolute;
+}
+
+.promotion-banner .content a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.promotion-banner .content span {
+  margin: 0 5px;
+}
+
+.pomotion-content {
+  margin-top: 30px;
+}
+
+.list-promo h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #984500;
+}
+
+.decor-title {
+  width: 400px;
+  height: 2px;
+  background-color: #934500;
+  margin: 0 auto;
+}
+
+.banner1 {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 10px 10px #dedede;
+  transition: all 0.3s linear;
+}
+
+.card1 img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card2 {
+  margin-left: -150px;
+  padding: 15px;
+}
+
+.card2 .ndcard {
+  margin-bottom: 15px;
+}
+
+.card2 .ndcard span {
+  font-weight: bold;
+  color: #927000;
+}
+
+.card2 .ndcard label {
+  font-weight: normal;
+  color: #555;
+}
+
+.card2 h5,
+.card2 div {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add this to prevent text overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.button {
+  padding-top: 20px;
+}
+
+.button button {
+  background-color: #ed8200;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button button:hover {
+  background-color: #d37b00ed;
+}
+
+.card3 {
+  width: 30%;
+  align-content: center;
+  text-align: center;
+  background-color: rgba(241, 90, 34, 0.5);
+}
+
+.day {
+  display: block;
+  font-size: 16px;
+}
+
+.day2 {
+  font-size: 50px;
+}
+
+.ComboCouple {
+  margin-left: 11.3%;
+}
+
+.ComboTiecAu {
+  margin-left: 4.2%;
+}
+
+#backtotop > .fa.fa-chevron-up {
+  position: fixed;
+  z-index: 2000;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #d95e00;
+  color: white;
+  border-radius: 50%;
+  margin-right: -8px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backtotop > .fa.fa-chevron-up:hover {
+  background-color: #ffcc00;
+  transform: scale(1.1); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+.khungmua {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.khungmua .mua {
+  background: rgb(0, 0, 0);
+  margin: 5% auto;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 1000px;
+  overflow: auto;
+  position: relative;
+}
+
+.khungmua .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.khungmua .close:hover {
+  color: #fff;
+}
+
+.mua_A {
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.mua_B {
+  width: 100%;
+  display: flex;
+}
+
+.muatrai {
+  width: 40%;
+  padding: 10px;
+}
+
+.nd1m {
+  text-align: center;
+  font-size: 18px;
+  color: orange;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.nd2m {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+img.a1m {
+  width: 80%;
+  display: block;
+  margin: 10px auto;
+}
+
+.t1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: orange;
+  margin-top: 5px;
+}
+
+.muatraiduoi {
+  width: 120px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 4px;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.muatraiduoi i {
+  color: rgb(182, 61, 0);
+  font-size: 20px;
+}
+
+.muatraiduoi p {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.muaphai {
+  width: 60%;
+  padding: 10px;
+}
+
+.muaphai1 {
+  padding: 25px;
+}
+
+.kkt {
+  font-size: 18px;
+  background: beige;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.nd3m {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.nd5m,
+.nd6m {
+  font-weight: bold;
+  margin: -1px 2px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+.ct {
+  font-weight: bold;
+}
+
+.chon1,
+.chon2 {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.chon1 p,
+.chon2 p {
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+input[type="radio"] {
+  margin-top: -3px;
+}
+
+form {
+  text-align: center;
+  margin-top: 10px;
+}
+
+input[type="text1"] {
+  height: 40px;
+  font-size: 14px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.Buy {
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  background: rgb(255, 106, 0);
+  color: white;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.table-container {
+  max-height: 120px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding: 5px;
+  justify-content: center;
+  display: flex;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background-color: white;
+}
