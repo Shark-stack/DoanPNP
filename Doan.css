@@ -702,7 +702,7 @@ p {
 }
 
 .menu-item {
-  height: 90%;
+  height: 88%;
   position: relative;
   background-color: white;
   border-radius: 8px;
@@ -1603,4 +1603,205 @@ input:not(:placeholder-shown) + label {
 #backtotop > .fa.fa-chevron-up:hover {
   background-color: #ffcc00;
   transform: scale(1.1); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+.khungmua {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.khungmua .mua {
+  background: rgb(0, 0, 0);
+  margin: 5% auto;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 1000px;
+  overflow: auto;
+  position: relative;
+}
+
+.khungmua .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.khungmua .close:hover {
+  color: #fff;
+}
+
+.mua_A {
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.mua_B {
+  width: 100%;
+  display: flex;
+}
+
+.muatrai {
+  width: 40%;
+  padding: 10px;
+}
+
+.nd1m {
+  text-align: center;
+  font-size: 18px;
+  color: orange;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.nd2m {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+img.a1m {
+  width: 80%;
+  display: block;
+  margin: 10px auto;
+}
+
+.t1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: orange;
+  margin-top: 5px;
+}
+
+.muatraiduoi {
+  width: 120px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 4px;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.muatraiduoi i {
+  color: rgb(182, 61, 0);
+  font-size: 20px;
+}
+
+.muatraiduoi p {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.muaphai {
+  width: 60%;
+  padding: 10px;
+}
+
+.muaphai1 {
+  padding: 25px;
+}
+
+.kkt {
+  font-size: 18px;
+  background: beige;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.nd3m {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.nd5m,
+.nd6m {
+  font-weight: bold;
+  margin: -1px 2px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+.ct {
+  font-weight: bold;
+}
+
+.chon1,
+.chon2 {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.chon1 p,
+.chon2 p {
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+input[type="radio"] {
+  margin-top: -3px;
+}
+
+form {
+  text-align: center;
+  margin-top: 10px;
+}
+
+input[type="text1"] {
+  height: 40px;
+  font-size: 14px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.Buy {
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  background: rgb(255, 106, 0);
+  color: white;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.table-container {
+  max-height: 120px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding: 5px;
+  justify-content: center;
+  display: flex;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background-color: white;
 }
