@@ -1605,6 +1605,7 @@ input:not(:placeholder-shown) + label {
   transform: scale(1.1); /* Hiệu ứng phóng to nhẹ khi hover */
 }
 
+/* Phan Layer Pizza */
 .khungmua {
   display: none;
   position: fixed;

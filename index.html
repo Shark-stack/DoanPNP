@@ -159,21 +159,21 @@
                                     <h3 class="Name">#1 MARGHERITA</h3>
                                     <p class="Gia_Ban">R 170.000 ₫<br />L 240.000 ₫</p>
                                     <p>Pizza với sốt cà chua và phô mai.</p>
-                                    <button class="But" onclick="openModal()">Chọn mua</button>
+                                    <button class="But" onclick="openModal('pizzaA')">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
                                     <div class="item-pizza"><img src="img/pizza2.jpg" alt="" /></div>
                                     <h3 class="Name">#2 HAWAIIAN</h3>
                                     <p class="Gia_Ban">R 170.000 ₫<br />L 240.000 ₫</p>
                                     <p>Pizza với sốt cà chua, jambông, thơm và phô mai.</p>
-                                    <button class="But" onclick="openModal()">Chọn mua</button>
+                                    <button class="But" onclick="openModal('pizzaB')">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
                                     <div class="item-pizza"> <img src="img/pizza3.jpg" alt="" /></div>
                                     <h3 class="Name">#3 TROPICANA SEAFOOD</h3>
                                     <p class="Gia_Ban">R 170.000 ₫<br />L 240.000 ₫</p>
                                     <p>Pizza hải sản, thơm, xốt ớt chua ngọt và phô mai.</p>
-                                    <button class="But" onclick="openModal()">Chọn mua</button>
+                                    <button class="But" onclick="openModal('pizzaC')">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
                                     <div class="item-pizza"> <img src="img/pizza4.jpg" alt="" /></div>
@@ -183,7 +183,7 @@
                                         Pizza với thịt ba chỉ bò và ba rọi xông khói, hành tây xào, cà chua
                                         nướng, v.v...
                                     </p>
-                                    <button class="But" onclick="openModal()">Chọn mua</button>
+                                    <button class="But" onclick="openModal('pizzaD')">Chọn mua</button>
                                 </div>
                                 <div class="menu-item">
                                     <div class="item-pizza"> <img src="img/pizza5.jpg" alt="" /></div>
@@ -193,7 +193,7 @@
                                         Pizza với thịt gà Mexico, xốt BBQ, ớt chuông xanh, nấm, jambông,
                                         v.v...
                                     </p>
-                                    <button class="But" onclick="openModal()">Chọn mua</button>
+                                    <button class="But" onclick="openModal('pizzaE')">Chọn mua</button>
                                 </div>
                             </div>
                         </section>
@@ -207,21 +207,21 @@
                                     <h3 class="Name">SOUP OF THE DAY</h3>
                                     <p class="Gia_Ban">95.000 ₫</p>
                                     <p>Các món súp đặc biệt trong ngày.</p>
-                                    <button class="But">Chọn mua</button>
+                                    <button class="But" onclick="openModal('soupA')">Chọn mua</button>
                                 </div>
                                 <div class="menu-item ">
                                     <div class="item-starters"><img src="img/HWing.jpg" alt="" /></div>
                                     <h3 class="Name">AL'S CHICKEN WINGS</h3>
                                     <p class="Gia_Ban">140.000 ₫</p>
                                     <p>Cánh gà nướng xốt BBQ</p>
-                                    <button class="But">Chọn mua</button>
+                                    <button class="But" onclick="openModal('startersB')">Chọn mua</button>
                                 </div>
                                 <div class="menu-item ">
                                     <div class="item-starters"><img src="img/Bread.jpg" alt="" /></div>
                                     <h3 class="Name">GARLIC CHEESE LOAF</h3>
                                     <p class="Gia_Ban">90.000 ₫</p>
                                     <p>Bánh mỳ bơ tỏi.</p>
-                                    <button class="But">Chọn mua</button>
+                                    <button class="But" onclick="openModal('startersC')">Chọn mua</button>
                                 </div>
                             </div>
                         </section>
@@ -764,13 +764,13 @@
         </footer>
     </div>
     <div id="orderModal" class="khungmua" style="display: none;">
-        <div class="mua">
+        <div class="mua" id="size-options">
             <div class="mua_A">Chọn sản phẩm</div>
             <div class="mua_B">
                 <div class="muatrai">
                     <div class="nd1m">#1 MARGHERTA(L)</div>
                     <div class="nd2m">Pizza với sốt cà chua và phô mai.</div>
-                    <img src="img/pizza.jpg" alt="" class="a1m">
+                    <img src="img/pizza1.jpg" alt="" class="a1m">
                     <div class="t1">240.000 đ</div>
                     <div class="muatraiduoi">
                         <i class="fa fa-minus-circle" aria-hidden="true"></i>
@@ -782,25 +782,21 @@
                     <div class="kkt">Chọn kích thước</div>
                     <div class="nd3m">(Thường R:6 miếng 22cm|Lớn L:8 miếng 30cm|Gia Đình FA:10 miếng 34cm)</div>
                     <div class="chon1">
-                        <input type="radio" name="sex" values="dat hang online" checked>
+                        <input type="radio" name="size" values="R" checked>
                         <p class="nd4m">R</p>
                         <div class="nd5m">170.000đ</div>
                         <br>
-                        <input type="radio" name="sex" values="thanh vien" checked>
+                        <input type="radio" name="size" values="L" checked>
                         <p class="nd4m">L</p>
                         <div class="nd5m">240.000đ</div>
-                        <br>
-                        <input type="radio" name="sex" values="thanh vien" checked>
-                        <p class="nd4m">FA</p>
-                        <div class="nd5m">280.000đ</div>
                         <br>
                     </div>
                     <div class="ct">Chọn đế</div>
                     <div class="chon2">
-                        <input type="radio" name="sex" values="m" checked>
+                        <input type="radio" name="crust" values="Mỏng" checked>
                         <div class="nd6m">Mỏng</div>
                         <br>
-                        <input type="radio" name="sex" values="d" checked>
+                        <input type="radio" name="crust" values="Dày" checked>
                         <div class="nd6m">Dày</div>
                         <br>
                     </div>
@@ -810,266 +806,103 @@
                         <div class="table-container">
                             <table>
                                 <div class="muaphai1">
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Phô mát" checked>
                                     <div class="nd7m">Phô mát</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Jăm bông" checked>
                                     <div class="nd7m">Jăm bông</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Xúc xích Mỹ" checked>
                                     <div class="nd7m">XúcxíchMỹ</div>
                                     <div class="nd8m">40.000đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Thịt bò xay" checked>
                                     <div class="nd7m">Thịt bò xay</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Mực" checked>
                                     <div class="nd7m">Mực</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Thanh Cua" checked>
                                     <div class="nd7m">Thanh Cua</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Nấm rơm" checked>
                                     <div class="nd7m">Nấm rơm</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Dứa" checked>
                                     <div class="nd7m">Dứa</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
                                 </div>
                                 <div class="muaphai1">
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Lườn gà" checked>
                                     <div class="nd7m">Lườn gà</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Thịt xông khói" checked>
                                     <div class="nd7m">Thịt xông khói</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Gà tacos" checked>
                                     <div class="nd7m">Gà tacos</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Cá" checked>
                                     <div class="nd7m">Cá</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Nghêu" checked>
                                     <div class="nd7m">Nghêu</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Sò Điệp" checked>
                                     <div class="nd7m">Sò Điệp</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Ngô hạt" checked>
                                     <div class="nd7m">Ngô hạt</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Ớt chuông xanh" checked>
                                     <div class="nd7m">Ớt chuông xanh</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
                                 </div>
                                 <div class="muaphai1">
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Sốt bò bằm" checked>
                                     <div class="nd7m">Sốt bò bằm</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Xúc xích đức" checked>
                                     <div class="nd7m">Xúc xích đức</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Ba chỉ bò nướng" checked>
                                     <div class="nd7m">Ba chỉ bò nướng</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Tôm" checked>
                                     <div class="nd7m">Tôm</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Cá ngừ" checked>
                                     <div class="nd7m">Cá ngừ</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Ôliu đen" checked>
                                     <div class="nd7m">Ôliu đen</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Hành tây" checked>
                                     <div class="nd7m">Hành tây</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Ớt chuông đỏ</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                </div>
-                            </table>
-                        </div>
-                    </form>
-                    <form>
-                        <div class="form-group">
-                            <input type="text1" id="GC" name="GC" placeholder=" " s>
-                            <label for="TN">Ghi chú</label>
-                        </div>
-                        <button class="Buy">Chọn mua</button>
-                    </form>
-                </div>
-            </div>
-            <span class="close" onclick="closeModal()">&times;</span>
-        </div>
-    </div>
-    <div id="orderModal" class="khungmua" style="display: none;">
-        <div class="mua">
-            <div class="mua_A">Chọn sản phẩm</div>
-            <div class="mua_B">
-                <div class="muatrai">
-                    <div class="nd1m">#1 MARGHERTA(L)</div>
-                    <div class="nd2m">Pizza với sốt cà chua và phô mai.</div>
-                    <img src="img/pizza.jpg" alt="" class="a1m">
-                    <div class="t1">240.000 đ</div>
-                    <div class="muatraiduoi">
-                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
-                        <p>1</p>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="muaphai">
-                    <div class="kkt">Chọn kích thước</div>
-                    <div class="nd3m">(Thường R:6 miếng 22cm|Lớn L:8 miếng 30cm|Gia Đình FA:10 miếng 34cm)</div>
-                    <div class="chon1">
-                        <input type="radio" name="sex" values="dat hang online" checked>
-                        <p class="nd4m">R</p>
-                        <div class="nd5m">170.000đ</div>
-                        <br>
-                        <input type="radio" name="sex" values="thanh vien" checked>
-                        <p class="nd4m">L</p>
-                        <div class="nd5m">240.000đ</div>
-                        <br>
-                        <input type="radio" name="sex" values="thanh vien" checked>
-                        <p class="nd4m">FA</p>
-                        <div class="nd5m">280.000đ</div>
-                        <br>
-                    </div>
-                    <div class="ct">Chọn đế</div>
-                    <div class="chon2">
-                        <input type="radio" name="sex" values="m" checked>
-                        <div class="nd6m">Mỏng</div>
-                        <br>
-                        <input type="radio" name="sex" values="d" checked>
-                        <div class="nd6m">Dày</div>
-                        <br>
-                    </div>
-                    <div class="ct">Thêm</div>
-                    <form action="#">
-                        <!-- Bảng có thanh cuộn -->
-                        <div class="table-container">
-                            <table>
-                                <div class="muaphai1">
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Phô mát</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Jăm bông</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">XúcxíchMỹ</div>
-                                    <div class="nd8m">40.000đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Thịt bò xay</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Mực</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Thanh Cua</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Nấm rơm</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Dứa</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                </div>
-                                <div class="muaphai1">
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Lườn gà</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Thịt xông khói</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Gà tacos</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Cá</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Nghêu</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Sò Điệp</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Ngô hạt</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Ớt chuông xanh</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                </div>
-                                <div class="muaphai1">
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Sốt bò bằm</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Xúc xích đức</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Ba chỉ bò nướng</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Tôm</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Cá ngừ</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Ôliu đen</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
-                                    <div class="nd7m">Hành tây</div>
-                                    <div class="nd8m">40.000 đ</div>
-                                    <br>
-                                    <input type="checkbox" name="m1" values="m1" checked>
+                                    <input type="checkbox" name="topping" values="Ớt chuông đỏ" checked>
                                     <div class="nd7m">Ớt chuông đỏ</div>
                                     <div class="nd8m">40.000 đ</div>
                                     <br>
