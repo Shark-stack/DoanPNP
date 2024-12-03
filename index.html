@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alfresco's PNP- Trải nghiệm ẩm thực đỉnh cao</title>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="animate.css-main/animate.css">
     <link rel="stylesheet" href="Doan.css">
     <link rel="stylesheet" href="css/font-awesome.css">
 </head>
@@ -77,8 +80,8 @@
                     <span class="Thanhvien">Thành viên</span>
                 </div>
                 <div class="ND">
-                    <a href=""><i class="fa fa-user-circle-o ic" aria-hidden="true"></i></a>
-                    <span class="ND1">Đăng Nhập</span> <span>/</span>
+                    <a><i class="fa fa-user-circle-o ic" aria-hidden="true"></i></a>
+                    <span class="ND1" href="javascript:void(0)" id="showLoginForm">Đăng Nhập</span> <span>/</span>
                     <span class="ND1">Đăng Ký</span>
                     <a href=""><i class="fa fa-shopping-bag ic" aria-hidden="true"><span
                                 class="Khong">(0)</span></i></a>
@@ -207,21 +210,21 @@
                                     <h3 class="Name">SOUP OF THE DAY</h3>
                                     <p class="Gia_Ban">95.000 ₫</p>
                                     <p>Các món súp đặc biệt trong ngày.</p>
-                                    <button class="But" onclick="openModal('soupA')">Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item ">
                                     <div class="item-starters"><img src="img/HWing.jpg" alt="" /></div>
                                     <h3 class="Name">AL'S CHICKEN WINGS</h3>
                                     <p class="Gia_Ban">140.000 ₫</p>
                                     <p>Cánh gà nướng xốt BBQ</p>
-                                    <button class="But" onclick="openModal('startersB')">Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                                 <div class="menu-item ">
                                     <div class="item-starters"><img src="img/Bread.jpg" alt="" /></div>
                                     <h3 class="Name">GARLIC CHEESE LOAF</h3>
                                     <p class="Gia_Ban">90.000 ₫</p>
                                     <p>Bánh mỳ bơ tỏi.</p>
-                                    <button class="But" onclick="openModal('startersC')">Chọn mua</button>
+                                    <button class="But">Chọn mua</button>
                                 </div>
                             </div>
                         </section>
@@ -413,7 +416,7 @@
                         <h3>KHUYẾN MÃI HÔM NAY</h3>
                         <div class="decor-title"></div>
                         <div class="banner1">
-                            <div class="card">
+                            <div class="card scrollCard" id="scrollCard1">
                                 <div class="card1">
                                     <img src="img/promo.jpg" alt="">
                                 </div>
@@ -444,7 +447,7 @@
                             </div>
                         </div>
                         <div class="banner1">
-                            <div class="card">
+                            <div class="card scrollCard" id="scrollCard2">
                                 <div class="card1">
                                     <img src="img/promo2.jpg" alt="">
                                 </div>
@@ -478,7 +481,7 @@
                             </div>
                         </div>
                         <div class="banner1">
-                            <div class="card">
+                            <div class="card scrollCard" id="scrollCard3">
                                 <div class="card1">
                                     <img src="img/promo3.jpg" alt="">
                                 </div>
@@ -511,7 +514,7 @@
                             </div>
                         </div>
                         <div class="banner1">
-                            <div class="card">
+                            <div class="card scrollCard" id="scrollCard4">
                                 <div class="card1">
                                     <img src="img/promo4.jpg" alt="">
                                 </div>
@@ -559,29 +562,35 @@
                     nhập khẩu
                     và những loại rượu vang ngon nổi tiếng.</p>
                 <div class="khungslide">
-                    <div class="dskhung">
-                        <ul class="slide">
-                            <li class="_1slide hienra">
-                                <img src="img/Store.jpg" alt="" class="anh">
-                            </li>
-                            <li class="_1slide">
-                                <img src="img/Store2.jpg" alt="" class="anh">
-                            </li>
-                            <li class="_1slide">
-                                <img src="img/Store3.jpg" alt="" class="anh">
-                            </li>
-                            <li class="_1slide">
-                                <img src="img/Store4.jpg" alt="" class="anh">
-                            </li>
-                            <li class="_1slide">
-                                <img src="img/Store5.jpg" alt="" class="anh">
-                            </li>
-                        </ul>
+                    <div class="slide">
+                        <div class="slide-item active">
+                            <img src="img/Store.jpg" alt="Store">
+                        </div>
+                        <div class="slide-item">
+                            <img src="img/Store2.jpg" alt="Store2">
+                        </div>
+                        <div class="slide-item">
+                            <img src="img/Store3.jpg" alt="Store3">
+                        </div>
+                        <div class="slide-item">
+                            <img src="img/Store4.jpg" alt="Store4">
+                        </div>
+                        <div class="slide-item">
+                            <img src="img/Store5.jpg" alt="Store5">
+                        </div>
                     </div>
 
-                    <div class="cacic">
-                        <i class="fa fa-arrow-circle-right phai" aria-hidden="true"></i>
-                        <i class="fa fa-chevron-circle-left trai" aria-hidden="true"></i>
+                    <button class="nuttrai" id="nuttrai"><i class="fa fa-chevron-circle-left"
+                            aria-hidden="true"></i></button>
+                    <button class="nutphai" id="nutphai"><i class="fa fa-chevron-circle-right"
+                            aria-hidden="true"></i></button>
+
+                    <div class="khungvongtron">
+                        <button data-slide="0" class="vongtron active"></button>
+                        <button data-slide="1" class="vongtron"></button>
+                        <button data-slide="2" class="vongtron"></button>
+                        <button data-slide="3" class="vongtron"></button>
+                        <button data-slide="4" class="vongtron"></button>
                     </div>
                 </div>
                 <p>Al Fresco’s cũng được đông đảo các gia đình người Việt, các gia đình người
@@ -771,11 +780,11 @@
                     <div class="nd1m">#1 MARGHERTA(L)</div>
                     <div class="nd2m">Pizza với sốt cà chua và phô mai.</div>
                     <img src="img/pizza1.jpg" alt="" class="a1m">
-                    <div class="t1">240.000 đ</div>
+                    <div id="tanggiamgia" class="t1">240.000 đ</div>
                     <div class="muatraiduoi">
-                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
-                        <p>1</p>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        <i class="fa fa-minus-circle" id="tru" aria-hidden="true"></i>
+                        <p id="tanggiamso">1</p>
+                        <i class="fa fa-plus-circle" id="cong" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="muaphai">
@@ -922,6 +931,21 @@
             <span class="close" onclick="closeModal()">&times;</span>
         </div>
     </div>
+    <div class="DN khungdangnhap" id="loginForm">
+        <div class="dangnhap">
+            <button class="close-btn" id="closeLoginForm">&times;</button>
+            <form action="" class="form-dangnhap">
+                <h3 class="taikhoan">Tài Khoản :</h3>
+                <input type="text" placeholder="Email hoặc số điện thoại" class="dangnhap-form" required>
+                <h3 class="taikhoan">Mật khẩu :</h3>
+                <input type="password" name="" id="matkhau" placeholder="Mật khẩu" class="dangnhap-form" required>
+                <div class="dangnhap-form dangnhap-btn dangnhap-button">Đăng nhập</div>
+                <a href="#" class="taikhoan tim-dangnhap">Đăng ký</a>
+                <a href="#" class="taikhoan tim-dangnhap">Tìm tài khoản</a>
+            </form>
+        </div>
+    </div>
+    <script src="Doan5.js"></script>
     <script src="Doan4.js"></script>
     <script src="Doan2.js"></script>
 </body>

@@ -1,47 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var nutphai = document.querySelector(".phai");
-  var nuttrai = document.querySelector(".trai");
-  var dsslide = document.querySelectorAll("._1slide");
-  var vitri = 0;
-  console.log(nutphai);
-  console.log(nuttrai);
-  nutphai.addEventListener("click", function () {
-    if (vitri < dsslide.length - 1) {
-      dsslide[vitri].classList.remove("hienra");
-      dsslide[vitri + 1].classList.add("hienra");
-      vitri++;
+  const Slide = document.querySelector(".slide");
+  const nuttrai = document.getElementById("nuttrai");
+  const nutphai = document.getElementById("nutphai");
+  const indicatorButtons = document.querySelectorAll(
+    ".khungvongtron .vongtron"
+  );
+  let currentSlide = 0;
+  const Slideitem = document.querySelectorAll(".slide-item").length;
+
+  function moveToSlide(slideIndex) {
+    if (slideIndex >= Slideitem) {
+      currentSlide = 0;
+    } else if (slideIndex < 0) {
+      currentSlide = Slideitem - 1;
     } else {
-      dsslide[dsslide.length - 1].classList.remove("hienra");
-      dsslide[0].classList.add("hienra");
-      vitri = 0;
+      currentSlide = slideIndex;
     }
+
+    Slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    indicatorButtons.forEach((button, index) => {
+      button.classList.toggle("active", index === currentSlide);
+    });
+  }
+
+  nutphai.addEventListener("click", function () {
+    moveToSlide(currentSlide + 1);
   });
 
   nuttrai.addEventListener("click", function () {
-    if (vitri > 0) {
-      dsslide[vitri].classList.remove("hienra");
-      dsslide[vitri - 1].classList.add("hienra");
-      vitri--;
-    } else {
-      dsslide[0].classList.remove("hienra");
-      dsslide[dsslide.length - 1].classList.add("hienra");
-      vitri = dsslide.length - 1;
-    }
+    moveToSlide(currentSlide - 1);
   });
 
-  // auto chuyển động slide
-  function autoSlide() {
-    if (vitri < dsslide.length - 1) {
-      dsslide[vitri].classList.remove("hienra");
-      dsslide[vitri + 1].classList.add("hienra");
-      vitri++;
-    } else {
-      dsslide[dsslide.length - 1].classList.remove("hienra");
-      dsslide[0].classList.add("hienra");
-      vitri = 0;
-    }
-  }
+  indicatorButtons.forEach((button, index) => {
+    button.addEventListener("click", function () {
+      moveToSlide(index);
+    });
+  });
 
-  // gọi autoSlide mỗi 3s
-  setInterval(autoSlide, 3000);
+  setInterval(function () {
+    moveToSlide(currentSlide + 1);
+  }, 3000);
 });

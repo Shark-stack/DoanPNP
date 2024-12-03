@@ -116,3 +116,39 @@ function openModal(productId) {
 function closeModal() {
   document.getElementById("orderModal").style.display = "none";
 }
+
+/* Su kien tang giam so luong va gia  */
+document.addEventListener("DOMContentLoaded", function () {
+  const truBtn = document.getElementById("tru");
+  const congBtn = document.getElementById("cong");
+  const tanggiamso = document.getElementById("tanggiamso");
+  const tanggiamgia = document.getElementById("tanggiamgia");
+
+  const basePrice = 240000; // Giá cơ bản
+  let quantity = 1; // Số lượng ban đầu
+
+  // Hàm cập nhật tổng giá
+  function updateTotalPrice() {
+    const totalPrice = basePrice * quantity;
+    tanggiamgia.textContent = `${totalPrice.toLocaleString()} đ`;
+  }
+
+  // Sự kiện giảm số lượng
+  truBtn.addEventListener("click", function () {
+    if (quantity > 1) {
+      quantity--; // Giảm số lượng
+      tanggiamso.textContent = quantity; // Cập nhật hiển thị số lượng
+      updateTotalPrice(); // Cập nhật giá
+    }
+  });
+
+  // Sự kiện tăng số lượng
+  congBtn.addEventListener("click", function () {
+    quantity++; // Tăng số lượng
+    tanggiamso.textContent = quantity; // Cập nhật hiển thị số lượng
+    updateTotalPrice(); // Cập nhật giá
+  });
+
+  // Cập nhật giá lần đầu khi tải trang
+  updateTotalPrice();
+});

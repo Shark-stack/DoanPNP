@@ -173,7 +173,7 @@ body {
 }
 
 .Menu_Left_List_2 li:hover {
-  background-color: beige;
+  background-color: rgb(86, 86, 86);
 }
 
 .HCM:hover .Menu_Left_List_2 {
@@ -263,7 +263,7 @@ body {
 .fa-times {
   font-size: 30px;
   /* Đặt kích thước chung cho cả dấu X và 3 gạch */
-  color: black;
+  color: #ffffff;
   /* Màu đen cho cả hai biểu tượng */
 }
 
@@ -600,10 +600,10 @@ section {
   color: white;
   text-decoration: none;
   font-size: 20px;
-  padding: 10px 10px; /* Khoảng cách bên trong liên kết */
-  z-index: 1; /* Đảm bảo chữ nằm trên vòng tròn */
+  padding: 10px 10px;
+  z-index: 1;
   transition: color 0.3s ease;
-  display: inline-block; /* Để pseudo-element bao quanh đúng nội dung */
+  display: inline-block;
 }
 
 /* Vòng tròn xuất hiện khi hover */
@@ -612,13 +612,13 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%; /* Độ rộng vòng tròn bằng nội dung chữ */
-  height: 100%; /* Chiều cao vòng tròn bằng nội dung chữ */
-  border: 5px solid rgb(173, 173, 173); /* Đường viền vòng tròn */
+  width: 100%;
+  height: 100%;
+  border: 5px solid rgb(173, 173, 173);
   border-radius: 50%; /* Tạo hình tròn */
-  transform: translate(-50%, -50%) scale(0); /* Thu nhỏ ban đầu */
-  transition: all 0.3s ease; /* Hiệu ứng mở rộng mượt mà */
-  z-index: 0; /* Vòng tròn nằm dưới chữ */
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease;
+  z-index: 0;
 }
 
 #Khung_Menu_3 ul li a:hover::before {
@@ -704,7 +704,7 @@ p {
 .menu-item {
   height: 88%;
   position: relative;
-  background-color: white;
+  background-color: #000000;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -763,7 +763,7 @@ p {
   background-color: #f05a28;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 25px;
   border-radius: 30px;
   cursor: pointer;
   font-size: 15px;
@@ -920,7 +920,7 @@ p {
 }
 
 .Bg5 {
-  padding-top: 100px;
+  padding-top: 60px;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -1015,7 +1015,7 @@ h1 {
   display: grid;
   justify-content: center;
   box-sizing: border-box;
-  background-color: white;
+  background-color: #000000;
   border: 1px solid #ddd;
   border-radius: 8px;
   width: 20%;
@@ -1040,7 +1040,6 @@ h1 {
 }
 
 .restaurant-item p:nth-child(3) {
-  /*nth-child(3)= định dạng cho dòng thứ 3 trong thẻ restaurant-item*/
   font-weight: bold;
 }
 
@@ -1064,73 +1063,78 @@ h1 {
   position: relative;
   width: 100%;
   height: 400px;
-}
-
-.dskhung {
-  list-style: none;
-  width: 100%;
-  height: 400px;
-  position: relative;
-  border-radius: 5px;
-  border: 3px solid rgb(0, 0, 0);
-}
-
-.anh {
-  width: 100%;
-  height: 400px;
-}
-
-.hienra {
-  visibility: visible !important;
-  opacity: 1 !important;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 3px solid black;
 }
 
 .slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slide-item {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
   position: relative;
+}
+
+.slide-item img {
   width: 100%;
-  height: 400px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-._1slide {
+.nuttrai,
+.nutphai {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.nuttrai {
+  left: 10px;
+}
+
+.nutphai {
+  right: 10px;
+}
+
+.nuttrai:hover,
+.nutphai:hover {
+  background-color: rgba(255, 145, 0, 0.8);
+}
+
+.khungvongtron {
+  position: absolute;
+  bottom: 10px;
   width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  visibility: hidden;
-  opacity: 0;
+  text-align: center;
 }
 
-.cacic {
-  position: absolute;
-  top: 140px;
-  left: 0px;
-  font-size: 40px;
-  width: 600px;
-}
-
-.trai {
-  margin-top: 40px;
-  float: left;
-  margin-left: 10px;
-}
-
-.phai {
-  margin-top: 40px;
-  float: right;
-  margin-right: -305px;
-}
-
-.khungslide:hover .trai,
-.phai {
+.khungvongtron .vongtron {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
   cursor: pointer;
 }
 
-.trai:hover {
-  color: rgb(255, 145, 0);
-}
-
-.phai:hover {
-  color: rgb(255, 145, 0);
+.khungvongtron .vongtron.active {
+  background-color: rgba(255, 145, 0, 0.8);
 }
 
 .form-group > .ip2:hover {
@@ -1291,7 +1295,7 @@ input[type="text"] {
   height: 30px;
   padding-top: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 5px;
 }
 
@@ -1490,17 +1494,18 @@ input:not(:placeholder-shown) + label {
   width: 100%;
   height: auto;
   display: flex;
-  background-color: #fff;
+  background-color: #000000;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 5px 10px 10px #dedede;
-  transition: all 0.3s linear;
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card1 img {
@@ -1534,8 +1539,8 @@ input:not(:placeholder-shown) + label {
   font-size: 16px;
   color: #333;
   overflow: hidden;
-  text-overflow: ellipsis; /* Add this to prevent text overflow */
-  white-space: nowrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .button {
@@ -1641,6 +1646,7 @@ input:not(:placeholder-shown) + label {
 }
 
 .mua_A {
+  text-transform: uppercase;
   width: 100%;
   font-size: 22px;
   font-weight: bold;
@@ -1654,6 +1660,7 @@ input:not(:placeholder-shown) + label {
 }
 
 .muatrai {
+  background-color: black;
   width: 40%;
   padding: 10px;
 }
@@ -1667,6 +1674,7 @@ input:not(:placeholder-shown) + label {
 }
 
 .nd2m {
+  color: white;
   text-align: center;
   font-size: 14px;
   margin-top: 5px;
@@ -1719,7 +1727,7 @@ img.a1m {
 
 .kkt {
   font-size: 18px;
-  background: beige;
+  background: #ff5f05;
   height: 25px;
   line-height: 25px;
   text-align: center;
@@ -1734,13 +1742,21 @@ img.a1m {
 
 .nd5m,
 .nd6m {
+  color: #ffffff;
   font-weight: bold;
   margin: -1px 2px 0px 0px;
   padding: 0px 10px 0px 10px;
 }
 
+.nd7m,
+.nd8m {
+  color: #ffffff;
+}
+
 .ct {
+  background-color: #f7a62c;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .chon1,
@@ -1786,6 +1802,7 @@ input[type="text1"] {
 }
 
 .table-container {
+  background-color: black;
   max-height: 120px;
   overflow-y: auto;
   margin-bottom: 15px;
@@ -1805,4 +1822,107 @@ input[type="text1"] {
 
 .table-container::-webkit-scrollbar-track {
   background-color: white;
+}
+
+/* Form đăng nhập ban đầu ẩn */
+.DN.khungdangnhap {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 100%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  border-radius: 8px;
+}
+
+/* Nút đóng */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ed8200;
+}
+
+.DN.khungdangnhap form {
+  display: flex;
+  flex-direction: column;
+}
+
+.DN.khungdangnhap input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.DN.khungdangnhap .dangnhap-btn {
+  background-color: #ed8200;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.DN.khungdangnhap .dangnhap-btn:hover {
+  background-color: #d37b00ed;
+}
+
+.dangnhap {
+  background-color: black;
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  animation: ease 5s;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50px;
+  border: 2px solid rgb(127, 127, 127);
+}
+
+.dangnhap-form {
+  padding: 5px;
+  border-radius: 10px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(23, 23, 23);
+  color: rgb(255, 166, 0);
+}
+
+.form-dangnhap {
+  color: rgb(0, 103, 144);
+  margin: 0 5px;
+}
+
+.tim {
+  display: flex;
+}
+
+.timA {
+  padding-left: 65px;
+}
+
+.tim-dangnhap {
+  line-height: 25px;
+  text-decoration: none;
 }
