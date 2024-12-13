@@ -261,9 +261,7 @@ body {
 .fa-bars,
 .fa-times {
   font-size: 30px;
-  /* Đặt kích thước chung cho cả dấu X và 3 gạch */
   color: #ffffff;
-  /* Màu đen cho cả hai biểu tượng */
 }
 
 .Logo img {
