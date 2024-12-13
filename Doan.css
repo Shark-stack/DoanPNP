@@ -197,7 +197,6 @@ body {
   /* ẩn menu ra ngoài */
   width: 250px;
   height: 100%;
-  background-color: rgb(203, 71, 0);
   color: white;
   transition: left 0.3s ease;
   /* hiệu ứng trượt */
@@ -441,6 +440,7 @@ body {
 .BBQ,
 .Salads,
 .Pasta {
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -530,21 +530,9 @@ body {
   width: 100%;
 }
 
-.Banner_BBQ > .BBQ:hover {
-  cursor: pointer;
-  color: rgb(255, 255, 0);
-}
-
-.Banner_Salads > .Salads:hover {
-  cursor: pointer;
-  color: rgb(255, 255, 0);
-}
-
-.Banner_Pasta > .Pasta:hover {
-  cursor: pointer;
-  color: rgb(255, 255, 0);
-}
-
+.Banner_BBQ > .BBQ:hover,
+.Banner_Salads > .Salads:hover,
+.Banner_Pasta > .Pasta:hover,
 .Banner_Pizza:hover .Pizza,
 .Banner_Starters:hover .Starters {
   cursor: pointer;
@@ -578,7 +566,7 @@ section {
 #Khung_Menu_3 {
   position: relative;
   height: 100%;
-  margin-top: -160px;
+  margin-top: -10%;
   width: 100%;
   align-items: center;
   padding: 5px 0;
@@ -630,6 +618,104 @@ section {
   position: relative;
   height: 100%;
   width: 100%;
+}
+
+.pizza-topping {
+  margin-left: 15px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #f1c40f;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  animation: spin 3s linear infinite;
+}
+
+.pizza-xoay,
+.rib-xoay {
+  justify-content: center;
+  display: flex;
+}
+
+.topping {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+}
+
+.topping:nth-child(1),
+.topping-rib:nth-child(1) {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topping:nth-child(2),
+.topping-rib:nth-child(2) {
+  top: 10%;
+  left: 75%;
+  transform: translateX(-50%);
+}
+
+.topping:nth-child(3),
+.topping-rib:nth-child(3) {
+  top: 50%;
+  left: 10%;
+  transform: translateX(-50%);
+}
+
+.topping:nth-child(4),
+.topping-rib:nth-child(4) {
+  top: 70%;
+  left: 60%;
+  transform: translateX(-50%);
+}
+
+.topping:nth-child(5),
+.topping-rib:nth-child(5) {
+  top: 60%;
+  left: 40%;
+  transform: translateX(-50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ribs-topping {
+  margin-left: 15px;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  border-radius: 2px;
+  clip-path: polygon(30% 20% 50%, 60%, 80% 60%, 70% 90%, 40% 70%, 20% 40%);
+  background-color: #a45306;
+  animation: ribs 3s linear infinite;
+}
+
+.topping-rib {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #303030;
+  border-radius: 50%;
+}
+
+@keyframes ribs {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .Khung_Content_1 {
@@ -730,14 +816,37 @@ p {
 }
 
 .But {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  margin: -18px 0px;
-  display: block;
+  background: linear-gradient(90deg, #ff8a00, #da1b60);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
   border-radius: 30px;
-  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.But::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-45deg);
+  transition: left 0.5s ease;
+}
+
+.But:hover::before {
+  left: 100%;
+}
+
+.But:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .menu-item img {
@@ -746,7 +855,7 @@ p {
 }
 
 .menu-item h3 {
-  color: #333;
+  color: #ffffff;
   font-size: 1.2em;
   margin: 15px 0 10px;
 }
@@ -755,23 +864,6 @@ p {
   color: #999;
   font-size: 0.9em;
   margin-bottom: 10px;
-}
-
-.menu-item button {
-  text-transform: uppercase;
-  font-weight: bold;
-  background-color: #f05a28;
-  color: white;
-  border: none;
-  padding: 8px 25px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 15px;
-  transition: background-color 0.3s;
-}
-
-.menu-item button:hover {
-  background-color: #d04e25;
 }
 
 .menu-item > .Gia_Ban {
@@ -793,10 +885,34 @@ p {
 
 .Background_Content_3 {
   height: 12.5%;
+  border-radius: 5px;
   width: 100%;
   margin-top: 60px;
-  background-color: rgb(0, 0, 0);
+  background: linear-gradient(
+    -45deg,
+    #776559e4 10%,
+    #433a2b 10%,
+    #212121 80%,
+    #3a3a3a
+  );
+  background-size: 400% 400%;
+  animation: gradient 6s ease infinite;
+  opacity: 1;
   z-index: 3;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .Khung_Content_3_1 {
@@ -920,7 +1036,7 @@ p {
 }
 
 .Bg5 {
-  padding-top: 60px;
+  padding-top: 28%;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -1204,6 +1320,12 @@ img.alienhe2 {
   height: 616px;
 }
 
+img.alienhe3 {
+  width: 100%;
+  height: 450px;
+  border-radius: 5px;
+}
+
 .ktronglienhe {
   height: 534px;
   width: 76%;
@@ -1216,12 +1338,7 @@ img.alienhe2 {
 
 .ktronglienhetrai {
   width: 50%;
-  height: 534px;
-}
-
-img.alienhe3 {
-  width: 100%;
-  height: 410px;
+  height: 600px;
 }
 
 .ktronglienhephai {
@@ -1328,7 +1445,7 @@ label {
   top: 10px;
   left: 10px;
   font-size: 16px;
-  color: #aaa;
+  color: #ffffff;
   transition: 0.3s;
   /* Thời gian chuyển đổi */
   pointer-events: none;
@@ -1414,7 +1531,7 @@ input:not(:placeholder-shown) + label {
   padding-top: 50px;
   position: relative;
   width: 100%;
-  min-height: 1600px;
+  min-height: 1250px;
   height: auto;
 }
 
@@ -1464,18 +1581,106 @@ input:not(:placeholder-shown) + label {
   margin-top: 30px;
 }
 
-.list-promo h3 {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #984500;
+.khuyenmaitoday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 20px 0;
+  text-transform: uppercase;
+  list-style: none;
 }
 
-.decor-title {
-  width: 400px;
-  height: 2px;
-  background-color: #934500;
-  margin: 0 auto;
+.khuyenmaitoday li {
+  font-weight: bold;
+  font-size: 33px;
+  letter-spacing: 5px;
+  text-shadow: none;
+  animation: animate 2s infinite linear;
+}
+
+@keyframes animate {
+  0%,
+  18%,
+  30%,
+  70%,
+  90%,
+  100% {
+    color: #484848;
+    text-shadow: none;
+  }
+  20%,
+  35%,
+  80% {
+    color: #ff8400;
+    text-shadow: 0 0 10px #ff8400, 0 0 20px #c56724;
+  }
+}
+
+.khuyenmaitoday li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.khuyenmaitoday li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.khuyenmaitoday li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.khuyenmaitoday li:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.khuyenmaitoday li:nth-child(5) {
+  animation-delay: 1s;
+}
+.khuyenmaitoday li:nth-child(6) {
+  animation-delay: 1.2s;
+}
+.khuyenmaitoday li:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.songs-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  margin-top: -5px;
+}
+
+/* Hiệu ứng sóng */
+.song {
+  position: absolute;
+  width: 200%;
+  height: 40%;
+  top: 0;
+  background: rgba(255, 163, 16, 0.469);
+  border-radius: 60%;
+  animation: wave-animation 5s infinite ease-in-out;
+}
+
+.song:nth-child(2) {
+  animation-delay: 2s;
+  background: rgba(139, 93, 38, 0.2);
+}
+
+.song:nth-child(3) {
+  animation-delay: 3s;
+  background: rgba(255, 157, 0, 0.418);
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(-30%);
+  }
+  50% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
 }
 
 .banner1 {
@@ -1525,7 +1730,7 @@ input:not(:placeholder-shown) + label {
 
 .card2 .ndcard span {
   font-weight: bold;
-  color: #927000;
+  color: #ffc506;
 }
 
 .card2 .ndcard label {
@@ -1537,7 +1742,7 @@ input:not(:placeholder-shown) + label {
 .card2 div {
   margin-top: 10px;
   font-size: 16px;
-  color: #333;
+  color: #ffffff;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1570,11 +1775,13 @@ input:not(:placeholder-shown) + label {
 }
 
 .day {
+  color: white;
   display: block;
   font-size: 16px;
 }
 
 .day2 {
+  color: white;
   font-size: 50px;
 }
 
@@ -1646,6 +1853,7 @@ input:not(:placeholder-shown) + label {
 }
 
 .mua_A {
+  color: white;
   text-transform: uppercase;
   width: 100%;
   font-size: 22px;
@@ -1736,6 +1944,7 @@ img.a1m {
 }
 
 .nd3m {
+  color: white;
   font-size: 16px;
   margin-bottom: 10px;
 }
@@ -1833,7 +2042,7 @@ input[type="text1"] {
   transform: translate(-50%, -20%);
   width: 100%;
   height: 80%;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgb(0 0 0 / 95%);
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 9999;
